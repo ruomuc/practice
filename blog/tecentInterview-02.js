@@ -6,7 +6,7 @@ const obj3 = { obj3: 3 };
 const arr = [obj1, obj2, obj3];
 
 function sort(arr) {
-  const newArr = Array(arr.length);
+  const newArr = [];
   // ...
   for (let i = 0, c, len = arr.length; i < len; i++) {
     c = ~~(Math.random() * (i + 1))
