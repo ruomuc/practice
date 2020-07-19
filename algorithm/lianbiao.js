@@ -7,6 +7,7 @@ function listNode(element) {
   this.next = null;         //下一个节点链接
 }
 
+// 单链表翻转
 /**
  * 查找链表的最后一个节点
  * @param {*} list 
