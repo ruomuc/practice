@@ -1,5 +1,4 @@
-
-[快排](./quick.js)
+[快排单边循环法](./quick.js)
 
 [链表翻转](./lianbiao.js)
 
