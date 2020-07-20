@@ -4,4 +4,8 @@
 
 [奇数链表寻找中间节点](./lianbiao2.js)
 
-[固定长度实现循环队列](./loopQueueByArray.js)
+[固定长度数组实现循环队列](./loopQueueByArray.js)
+
+[链表初实现二叉树](./linkTree.js)
+
+[两数之和的三种实现](./towNumberSum.js)
