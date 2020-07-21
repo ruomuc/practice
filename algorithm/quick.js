@@ -37,3 +37,7 @@ function partition(arr, startIndex, endIndex, sortRule) {
 }
 
 quickSort(arr, 0, arr.length - 1, 'ASC')
+
+module.exports = {
+  quickSort
+}
