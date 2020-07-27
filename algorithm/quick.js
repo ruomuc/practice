@@ -1,8 +1,5 @@
 const arr = [4, 7, 4, 3, 5, 6, 2, 8, 1]
 
-let aimElement = 0;
-let mark = 0;
-
 /**
  * 单边循环快速排序
  * @param {*} arr 
