@@ -20,4 +20,6 @@
 
 [用栈实现浏览器的前进后退功能](./stack3.js)
 
-[链表实现队列](./linkQueue.js)`
+[链表实现队列](./linkQueue.js)
+
+[约瑟夫环循环队列实现](./josephRing.js)
