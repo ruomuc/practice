@@ -25,3 +25,5 @@
 [约瑟夫环循环队列实现](./josephRing.js)
 
 [一个字符串是否包含另一个字符串](./subString.js)
+
+[两个字符串的最大公共子串](./largestPublicString.js)
