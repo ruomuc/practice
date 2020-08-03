@@ -40,13 +40,23 @@ class DictTree {
       }
     }
   }
-  search(node, element) {
-
+  findChild(node, element) {
+    // 找不到，返回空
+    if (node.children.length === 0) {
+      return null;
+    }
+    for (let index = 0; index < node.children.length; index++) {
+      const e = node.children[index].element;
+      if (element === e) {
+        return node.children[index];
+      }
+    }
+    return null;
   }
 }
 
-const strArray = ['cat', 'car', 'city', 'dog', 'door', 'deep']
-const str = 'cat';
+const strArray = ['cat', 'car', 'cover', 'city', 'driver', 'dog', 'door', 'deep']
+const str = 'ca';
 function isAppear(str, strArray) {
   // 首先生成字典树
   const dictTree = new DictTree();
@@ -57,6 +67,17 @@ function isAppear(str, strArray) {
       tempNode = dictTree.add(tempNode, v);
     }
   }
-  console.log(JSON.stringify(dictTree));
+
+  // 逐个匹配字符串的字节，看是否能完全匹配，且最后一个字节在叶子节点
+  const tempArray = [...str];
+  let lastNode = dictTree.head;
+  for (let index = 0; index < tempArray.length; index++) {
+    lastNode = dictTree.findChild(lastNode, tempArray[index]);
+    if (lastNode != null && index === tempArray.length - 1 && lastNode.children.length === 0) {
+      // 如果找到了并且是最后一个节点，返回true
+      return true;
+    }
+  }
+  return false;
 }
-isAppear(str, strArray)
+console.log(isAppear(str, strArray))
