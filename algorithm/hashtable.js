@@ -40,7 +40,7 @@ class LinkList {
       if (cur.element === element) {
         return true
       }
-      cur = cur.next;
+      cur = cur.next
     }
     // 找不到返回false
     return false
