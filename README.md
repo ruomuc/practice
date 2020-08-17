@@ -1,4 +1,4 @@
-# practice
+## practice
 Some practice codes
 my blog's code repository
 
@@ -8,3 +8,5 @@ my blog's code repository
 [看es6语法写的草稿](./es6)
 
 [乱七八糟的草稿](./other)
+
+[leetcode刷题](./leet-code)
