@@ -21,3 +21,7 @@
 [JavaScript](./runningSum.js)
 
 [golang](./runningSum.go)
+
+**拥有最多糖果的孩子**
+
+[JavaScript](./kidsWithCandies.js)
