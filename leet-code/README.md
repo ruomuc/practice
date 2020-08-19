@@ -6,12 +6,18 @@
 
 **两数之和**
 
-[js](./toNumberSum.js)
+[JavaScript](./toNumberSum.js)
 
-[go](./toNumberSum.go)
+[golang](./toNumberSum.go)
 
 **两数相加**
 
-[js](./addTwoNumbers.js)
+[JavaScript](./addTwoNumbers.js)
 
-[go](./addTwoNumbers.go)
+[golang](./addTwoNumbers.go)
+
+**一维数组动态和**
+
+[JavaScript](./runningSum.js)
+
+[golang](./runningSum.go)

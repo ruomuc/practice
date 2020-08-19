@@ -22,4 +22,8 @@ func main() {
 	result2 := addTwoNumbers(l1, l2)
 	cresult2, _ := json.Marshal(result2)
 	fmt.Println("两数相加：", string(cresult2))
+
+	// 一维数组动态和
+	result3 := runningSum(nums)
+	fmt.Println("一维数组动态和：", result3)
 }
