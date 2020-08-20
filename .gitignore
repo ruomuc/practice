@@ -1,4 +1,4 @@
 /node_modules
 /.vscode
-./leet-code/leet-code.exe
-./package-lock.json
+leet-code/leet-code.exe
+package-lock.json
