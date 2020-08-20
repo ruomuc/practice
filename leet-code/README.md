@@ -25,3 +25,5 @@
 **拥有最多糖果的孩子**
 
 [JavaScript](./kidsWithCandies.js)
+
+[golang](./kidsWithCandies.go)
