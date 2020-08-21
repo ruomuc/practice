@@ -27,3 +27,9 @@
 [JavaScript](./kidsWithCandies.js)
 
 [golang](./kidsWithCandies.go)
+
+**好数对的数目**
+
+[JavaScript](./countGoodNum.js)
+
+[golang](./countGoodNum.go)
