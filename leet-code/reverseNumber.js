@@ -9,7 +9,6 @@ var reverse = function (x) {
   while (x) {
     rn = rn * 10 + (x % 10)
     x = parseInt(x / 10)
-    console.log(x)
   }
   return rn > max || rn < min ? 0 : rn
 }

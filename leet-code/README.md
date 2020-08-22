@@ -39,3 +39,9 @@
 [JavaScript](./reverseNumber.js)
 
 [golang](./reverseNumber.go)
+
+**回文数**
+
+[JavaScript](./isPalindrome.js)
+
+[golang](./isPalindrome.go)
