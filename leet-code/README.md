@@ -33,3 +33,9 @@
 [JavaScript](./countGoodNum.js)
 
 [golang](./countGoodNum.go)
+
+**整数反转**
+
+[JavaScript](./reverseNumber.js)
+
+[golang](./reverseNumber.go)

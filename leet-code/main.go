@@ -27,6 +27,5 @@ func main() {
 	result3 := runningSum(nums)
 	fmt.Println("一维数组动态和：", result3)
 
-	// 拥有最多糖果的孩子
-
+	// End~ go语言造数据太麻烦了，我直接丢到leet-code上面跑了
 }
