@@ -3,8 +3,7 @@
  * @param {*} arr 
  */
 function flatten(arr) {
-  return arr.reduce((prev, item) => {
-    console.log('prev', prev)
+  return arr.reduceRight((prev, item) => {
     return prev.concat(Array.isArray(item) ? flatten(item) : item)
   }, [])
 }
