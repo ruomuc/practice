@@ -1,14 +1,14 @@
 package main
 
 func shuffle(nums []int, n int) []int {
-	m, result := 0, []int{}
+	m, result := 0, make([]int, len(nums))
 
 	for i := range nums {
 		if i%2 == 0 {
-			result = append(result, nums[m])
+			result[i] = nums[m]
 			m++
 		} else {
-			result = append(result, nums[n])
+			result[i] = nums[n]
 			n++
 		}
 	}

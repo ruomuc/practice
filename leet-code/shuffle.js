@@ -8,9 +8,9 @@ var shuffle = function (nums, n) {
   let result = []
   for (let i = 0; i < nums.length; i++) {
     if (i % 2 === 0) {
-      result.push(nums[m++])
+      result[i] = nums[m++]
     } else {
-      result.push(nums[n++])
+      result[i] = nums[n++]
     }
   }
   return result
