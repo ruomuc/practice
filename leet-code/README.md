@@ -38,3 +38,16 @@
 **左旋转字符串**
 - [JavaScript](./reverseLeftWords.js)
 - [golang](./reverseLeftWords.go)
+
+**数组异或操作**
+- [JavaScript](./xorOperation.js)
+- [golang](./xorOperation.go)
+
+**删除中间节点**
+- [JavaScript](./deleteNode.js)
+- [golang](./deleteNode.go)
+
+**猜数字**
+- [JavaScript](./game.js)
+- [golang](./game.go)
+  
