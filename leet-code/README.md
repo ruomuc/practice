@@ -51,3 +51,10 @@
 - [JavaScript](./game.js)
 - [golang](./game.go)
   
+**宝石与石头**
+- [JavaScript](./numJewelsInStones.js)
+- [golang](./numJewelsInStones.go)
+
+**地址无效化**
+- [JavaScript](./defangIPaddr.js)
+- [golang](./defangIPaddr.go)
