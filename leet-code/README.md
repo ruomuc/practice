@@ -58,3 +58,7 @@
 **地址无效化**
 - [JavaScript](./defangIPaddr.js)
 - [golang](./defangIPaddr.go)
+
+**拿硬币**
+- [JavaScript](./minCount.js)
+- [golang](./minCount.go)
