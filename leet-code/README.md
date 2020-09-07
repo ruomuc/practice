@@ -70,3 +70,7 @@
 **二叉树的层次遍历 II**
 - [JavaScript](./levelOrderBottom.js)
 - [golang](./levelOrderBottom.go)
+
+**按既定顺序创建目标数组**
+- [JavaScript](./createTargetArray.js)
+- [golang](./createTargetArray.go)
