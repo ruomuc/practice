@@ -74,3 +74,19 @@
 **按既定顺序创建目标数组**
 - [JavaScript](./createTargetArray.js)
 - [golang](./createTargetArray.go)
+
+**矩阵对角线元素的和**
+- [JavaScript](./diagonalSum.js)
+- [golang](./diagonalSum.go)
+
+**整数的各位积和之差**
+- [JavaScript](./subtractProductAndSum.js)
+- [golang](./subtractProductAndSum.go)
+
+**将数字变成 0 的操作次数**
+- [JavaScript](./numberOfSteps.js)
+- [golang](./numberOfSteps.go)
+
+**统计位数为偶数的数字**
+- [JavaScript](./findNumbers.js)
+- [golang](./findNumbers.go)
