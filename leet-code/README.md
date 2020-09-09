@@ -90,3 +90,11 @@
 **统计位数为偶数的数字**
 - [JavaScript](./findNumbers.js)
 - [golang](./findNumbers.go)
+
+**访问所有点的最小时间**
+- [JavaScript](./minTimeToVisitAllPoints.js)
+- [golang](./minTimeToVisitAllPoints.go)
+
+**有多少小于当前数字的数字**
+- [JavaScript](./smallerNumbersThanCurrent.js)
+- [golang](./smallerNumbersThanCurrent.go)
