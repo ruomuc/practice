@@ -102,3 +102,11 @@
 **有多少小于当前数字的数字**
 - [JavaScript](./smallerNumbersThanCurrent.js)
 - [golang](./smallerNumbersThanCurrent.go)
+
+**二进制链表转整数**
+- [JavaScript](./getDecimalValue.js)
+- [golang](./getDecimalValue.go)
+
+**重新排列字符串**
+- [JavaScript](./restoreString.js)
+- [golang](./restoreString.go)
