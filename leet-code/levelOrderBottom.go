@@ -1,5 +1,6 @@
 package main
 
+// TreeNode is a list node
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
