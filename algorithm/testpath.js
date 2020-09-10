@@ -9,7 +9,6 @@ function process (matrix, i) {
   } else {
     let distance = 999
     for (let j = 0; j < i; j++) {
-      console.log(j, i)
       if (matrix[j][i] != 0) {
         let dump = matrix[j][i] + process(matrix, j)
         if (dump < distance) {
