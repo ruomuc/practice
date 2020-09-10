@@ -27,5 +27,5 @@ func smallerNumbersThanCurrent2(nums []int) []int {
 }
 
 func quickSort(arr []int, left int, right int) {
-
+	
 }
