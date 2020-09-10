@@ -94,3 +94,11 @@
 **罗马数字转整数**
 - [JavaScript](./romanToInt.js)
 - [golang](./romanToInt.go)
+
+**访问所有点的最小时间**
+- [JavaScript](./minTimeToVisitAllPoints.js)
+- [golang](./minTimeToVisitAllPoints.go)
+
+**有多少小于当前数字的数字**
+- [JavaScript](./smallerNumbersThanCurrent.js)
+- [golang](./smallerNumbersThanCurrent.go)

@@ -106,9 +106,8 @@ function quickSort (arr, left, right) {
 
   i = left
   j = right
-  flag = left
 
-  temp = arr[flag]
+  temp = arr[left]
   while (i < j) {
     // 先看右边，依次往左递减
     while (temp <= arr[j] && i < j) {
@@ -122,7 +121,7 @@ function quickSort (arr, left, right) {
     arr[j] = arr[i]
     arr[i] = t
   }
-  arr[flag] = arr[i]
+  arr[left] = arr[i]
   arr[i] = temp
   // 递归调用左半数组
   quickSort(arr, left, j - 1)
