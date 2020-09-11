@@ -42,7 +42,6 @@ var smallerNumbersThanCurrent = function (nums) {
 }
 
 var quickSort = function (arr, left, right) {
-  console.log(left, right)
   if (left >= right) {
     return arr
   }

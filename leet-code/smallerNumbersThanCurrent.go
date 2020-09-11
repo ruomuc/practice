@@ -15,17 +15,52 @@ func smallerNumbersThanCurrent(nums []int) []int {
 	return nums
 }
 
+// FIXME: [5,0,10,0,10,6]
 func smallerNumbersThanCurrent2(nums []int) []int {
-	var tempArr []int
-	tempArr = nums
+	var result = make([]int, len(nums))
+	var tempArr = make([]int, len(nums))
+	for i := range nums {
+		tempArr[i] = nums[i]
+	}
+
 	quickSort(tempArr, 0, len(tempArr)-1)
 
 	var tempMap = make(map[int]int)
 	for i, val := range tempArr {
-		if
+		if _, ok := tempMap[val]; !ok {
+			tempMap[val] = i
+		}
 	}
+	for i, val := range nums {
+		result[i] = tempMap[val]
+
+	}
+	return result
 }
 
 func quickSort(arr []int, left int, right int) {
-	
+	if left >= right {
+		return
+	}
+	var i, j int
+	i = left
+	j = right
+	flag := arr[left]
+
+	for i < j {
+		for flag <= arr[j] && i < j {
+			j--
+		}
+		for flag >= arr[j] && i < j {
+			i++
+		}
+		// 交换位置
+		temp := arr[i]
+		arr[i] = arr[j]
+		arr[j] = temp
+	}
+	arr[left] = arr[i]
+	arr[i] = flag
+	quickSort(arr, left, j-1)
+	quickSort(arr, j+1, right)
 }
