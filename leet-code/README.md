@@ -3,6 +3,8 @@
 
 因为最近在看`go`，时间允许会用多种语言实现一下
 
+### 简单
+
 **两数之和**
 - [JavaScript](./toNumberSum.js)
 - [golang](./toNumberSum.go)
@@ -110,3 +112,15 @@
 **重新排列字符串**
 - [JavaScript](./restoreString.js)
 - [golang](./restoreString.go)
+
+**二叉树的层平均值**
+- [JavaScript](./averageOfLevels.js)
+- [golang](./averageOfLevels.go)
+
+**最小高度树**
+- [JavaScript](./sortedArrayToBST.js)
+- [golang](./sortedArrayToBST.go)
+
+**二叉树的深度**
+- [JavaScript](./maxDepth.js)
+- [golang](./maxDepth.go)

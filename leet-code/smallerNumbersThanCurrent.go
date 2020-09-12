@@ -15,7 +15,6 @@ func smallerNumbersThanCurrent(nums []int) []int {
 	return nums
 }
 
-// FIXME: [5,0,10,0,10,6]
 func smallerNumbersThanCurrent2(nums []int) []int {
 	var result = make([]int, len(nums))
 	var tempArr = make([]int, len(nums))
@@ -51,7 +50,7 @@ func quickSort(arr []int, left int, right int) {
 		for flag <= arr[j] && i < j {
 			j--
 		}
-		for flag >= arr[j] && i < j {
+		for flag >= arr[i] && i < j {
 			i++
 		}
 		// 交换位置
