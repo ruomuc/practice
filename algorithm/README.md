@@ -1,3 +1,5 @@
+## 不完全目录...
+
 [冒泡排序](./bubble.js)
 
 [快排单边循环法](./quick.js)
@@ -39,3 +41,5 @@
 [二叉树的层序遍历](./bTree3.js)
 
 [开放寻址法实现哈希表的插入与查询](./hashtable.js)
+
+[删除链表倒数第n个结点](./deleteCountDownNode.js)
