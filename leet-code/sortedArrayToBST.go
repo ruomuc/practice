@@ -21,4 +21,5 @@ func generateTree(nums []int, left int, right int) *TreeNode {
 	node.Val = nums[mid]
 	node.Left = generateTree(nums, left, mid-1)
 	node.Right = generateTree(nums, mid+1, right)
+	return node
 }
