@@ -123,3 +123,15 @@
 **二叉树的深度**
 - [JavaScript](./maxDepth.js)
 - [golang](./maxDepth.go)
+
+**最长公共前缀**
+- [JavaScript](./longestCommonPrefix.js)
+- [golang](./longestCommonPrefix.go)
+
+**删除排序数组中的重复项**
+- [JavaScript](./removeDuplicates.js)
+- [golang](./removeDuplicates.go)
+
+**有效的括号**
+- [JavaScript](./isValid.js)
+- [golang](./isValid.go)
