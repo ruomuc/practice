@@ -22,9 +22,7 @@ function generateTree (arr, left, right) {
     return null
   }
   let mid = parseInt((right + left) / 2)
-  console.log(left, right, mid)
   let node = new TreeNode(arr[mid])
-  console.log(mid)
   node.left = generateTree(arr, left, mid - 1)
   node.right = generateTree(arr, mid + 1, right)
   return node
