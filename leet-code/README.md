@@ -135,3 +135,15 @@
 **有效的括号**
 - [JavaScript](./isValid.js)
 - [golang](./isValid.go)
+
+**翻转二叉树**
+- [JavaScript](./invertTree.js)
+- [golang](./invertTree.go)
+
+**移除元素**
+- [JavaScript](./removeElement.js)
+- [golang](./removeElement.go)
+
+**合并两个有序链表**
+- [JavaScript](./mergeTwoLists.js)
+- [golang](./mergeTwoLists.go)
