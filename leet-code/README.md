@@ -155,3 +155,7 @@
 **买卖股票的最佳时机**
 - [JavaScript](./maxProfit.js)
 - [golang](./maxProfit.go)
+
+**把二叉搜索树转换为累加树**
+- [JavaScript](./convertBST.js)
+- [golang](./convertBST.go)
