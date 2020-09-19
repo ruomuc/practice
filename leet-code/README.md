@@ -159,3 +159,11 @@
 **把二叉搜索树转换为累加树**
 - [JavaScript](./convertBST.js)
 - [golang](./convertBST.go)
+
+**左叶子之和**
+- [JavaScript](./sumOfLeftLeaves.js)
+- [golang](./sumOfLeftLeaves.go)
+
+**合并二叉树**
+- [JavaScript](./mergeTrees.js)
+- [golang](./mergeTrees.go)
