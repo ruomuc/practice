@@ -168,6 +168,11 @@
 - [JavaScript](./mergeTrees.js)
 - [golang](./mergeTrees.go)
 
+**找到所有数组中消失的数字**
+- [JavaScript](./findDisappearedNumbers.js)
+- [golang](./findDisappearedNumbers.go)
+
+
 
 ### 中等
 **子集**
