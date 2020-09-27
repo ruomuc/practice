@@ -172,7 +172,9 @@
 - [JavaScript](./findDisappearedNumbers.js)
 - [golang](./findDisappearedNumbers.go)
 
-
+**二叉搜索树的最近公共祖先**
+- [JavaScript](./lowestCommonAncestor.js)
+- [golang](./lowestCommonAncestor.go)
 
 ### 中等
 **子集**
