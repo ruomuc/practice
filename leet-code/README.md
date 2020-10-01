@@ -176,6 +176,11 @@
 - [JavaScript](./lowestCommonAncestor.js)
 - [golang](./lowestCommonAncestor.go)
 
+**二叉树的直径**
+- [JavaScript](./diameterOfBinaryTree.js)
+- [golang](./diameterOfBinaryTree.go)
+
+
 ### 中等
 **子集**
 - [JavaScript](./subsets.js)
