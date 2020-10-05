@@ -180,6 +180,9 @@
 - [JavaScript](./diameterOfBinaryTree.js)
 - [golang](./diameterOfBinaryTree.go)
 
+**最大子序和**
+- [JavaScript](./maxSubArray.js)
+- [golang](./maxSubArray.go)
 
 ### 中等
 **子集**
@@ -193,3 +196,7 @@
 **二叉树的后序遍历**
 - [JavaScript](./postorderTraversal.js)
 - [golang](./postorderTraversal.go)
+
+**四数之和**
+- [JavaScript](./fourSum.js)
+- [golang](./fourSum.go)

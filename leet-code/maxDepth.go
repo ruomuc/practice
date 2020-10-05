@@ -18,14 +18,14 @@ func backOrderTree(root *TreeNode) int {
 	if root == nil {
 		return 0
 	}
-	return max(backOrderTree(root.Left), backOrderTree(root.Right)) + 1
-}
-
-func max(x, y int) int {
-	if x > y {
-		return x
+	var max func(x, y int) int
+	max = func(x, y int) int {
+		if x > y {
+			return x
+		}
+		return y
 	}
-	return y
+	return max(backOrderTree(root.Left), backOrderTree(root.Right)) + 1
 }
 
 // 层序遍历解法
