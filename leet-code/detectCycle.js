@@ -6,7 +6,7 @@ function listNode (element) {
   this.element = element //当前节点的元素
   this.next = null //下一个节点链接
 }
-/**
+/**w
  * 查找链表的最后一个节点
  * @param {*} list
  */
