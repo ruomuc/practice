@@ -208,3 +208,7 @@
 **环形链表 II**
 - [JavaScript](./detectCycle.js)
 - [golang](./detectCycle.go)
+
+**分割等和子集**
+- [JavaScript](./canPartition.js)
+- [golang](./canPartition.go)
