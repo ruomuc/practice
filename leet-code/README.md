@@ -188,6 +188,10 @@
 - [JavaScript](./reverseString.js)
 - [golang](./reverseString.go)
 
+**二叉搜索树的最小绝对差**
+- [JavaScript](./getMinimumDifference.js)
+- [golang](./getMinimumDifference.go)
+
 ### 中等
 **子集**
 - [JavaScript](./subsets.js)
@@ -212,3 +216,7 @@
 **分割等和子集**
 - [JavaScript](./canPartition.js)
 - [golang](./canPartition.go)
+
+**两两交换链表中的节点**
+- [JavaScript](./swapPairs.js)
+- [golang](./swapPairs.go)
