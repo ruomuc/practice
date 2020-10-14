@@ -192,6 +192,11 @@
 - [JavaScript](./getMinimumDifference.js)
 - [golang](./getMinimumDifference.go)
 
+**查找常用字符**
+- [JavaScript](./commonChars.js)
+- [golang](./commonChars.go)
+
+
 ### 中等
 **子集**
 - [JavaScript](./subsets.js)
