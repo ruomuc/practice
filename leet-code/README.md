@@ -225,3 +225,7 @@
 **两两交换链表中的节点**
 - [JavaScript](./swapPairs.js)
 - [golang](./swapPairs.go)
+
+**填充每个节点的下一个右侧节点指针**
+- [JavaScript](./connect.js)
+- [golang](./swapPairs.go)
