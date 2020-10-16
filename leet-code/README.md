@@ -196,6 +196,10 @@
 - [JavaScript](./commonChars.js)
 - [golang](./commonChars.go)
 
+**有序数组的平方**
+- [JavaScript](./sortedSquares.js)
+- [golang](./sortedSquares.go)
+
 
 ### 中等
 **子集**
