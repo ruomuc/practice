@@ -232,4 +232,8 @@
 
 **填充每个节点的下一个右侧节点指针**
 - [JavaScript](./connect.js)
-- [golang](./swapPairs.go)
+- [golang](./connect.go)
+
+**N皇后 II**
+- [JavaScript](./totalNQueens.js)
+- [golang](./totalNQueens.go)
