@@ -237,3 +237,7 @@
 **N皇后 II**
 - [JavaScript](./totalNQueens.js)
 - [golang](./totalNQueens.go)
+
+**删除链表的倒数第N个节点**
+- [JavaScript](./removeNthFromEnd.js)
+- [golang](./removeNthFromEnd.go)
