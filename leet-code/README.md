@@ -200,6 +200,10 @@
 - [JavaScript](./sortedSquares.js)
 - [golang](./sortedSquares.go)
 
+**比较含退格的字符串**
+- [JavaScript](./backspaceCompare.js)
+- [golang](./backspaceCompare.go)
+
 
 ### 中等
 **子集**
@@ -241,3 +245,7 @@
 **删除链表的倒数第N个节点**
 - [JavaScript](./removeNthFromEnd.js)
 - [golang](./removeNthFromEnd.go)
+
+**重排链表**
+- [JavaScript](./reorderList.js)
+- [golang](./reorderList.go)
