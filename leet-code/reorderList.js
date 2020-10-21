@@ -19,7 +19,7 @@ var reorderList = function (head) {
   }
   let { top, tail } = findMidNode(head)
   tail = reverseLink(tail)
-  return mergeLink(top, tail)
+  mergeLink(top, tail)
 }
 
 function findMidNode (head) {

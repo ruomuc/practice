@@ -204,6 +204,9 @@
 - [JavaScript](./backspaceCompare.js)
 - [golang](./backspaceCompare.go)
 
+**长按键入**
+- [JavaScript](./isLongPressedName.js)
+- [golang](./isLongPressedName.go)
 
 ### 中等
 **子集**
