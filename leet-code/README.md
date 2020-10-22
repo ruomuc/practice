@@ -209,6 +209,7 @@
 - [golang](./isLongPressedName.go)
 
 ### 中等
+
 **子集**
 - [JavaScript](./subsets.js)
 - [golang](./subsets.go)
@@ -241,10 +242,6 @@
 - [JavaScript](./connect.js)
 - [golang](./connect.go)
 
-**N皇后 II**
-- [JavaScript](./totalNQueens.js)
-- [golang](./totalNQueens.go)
-
 **删除链表的倒数第N个节点**
 - [JavaScript](./removeNthFromEnd.js)
 - [golang](./removeNthFromEnd.go)
@@ -252,3 +249,9 @@
 **重排链表**
 - [JavaScript](./reorderList.js)
 - [golang](./reorderList.go)
+
+## 困难
+
+**N皇后 II**
+- [JavaScript](./totalNQueens.js)
+- [golang](./totalNQueens.go)

@@ -21,7 +21,7 @@ func findMidNode(head *ListNode) (*ListNode, *ListNode) {
 	slow := head
 
 	for fast != nil && fast.Next != nil && fast.Next.Next != nil {
-		fast = fast.Next
+		fast = fast.Next.Next
 		slow = slow.Next
 	}
 
