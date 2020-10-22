@@ -250,8 +250,13 @@
 - [JavaScript](./reorderList.js)
 - [golang](./reorderList.go)
 
+**划分字母区间**
+- [JavaScript](./partitionLabels.js)
+- [golang](./partitionLabels.go)
+- 
 ## 困难
 
 **N皇后 II**
 - [JavaScript](./totalNQueens.js)
 - [golang](./totalNQueens.go)
+
