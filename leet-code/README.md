@@ -252,3 +252,7 @@
 **重排链表**
 - [JavaScript](./reorderList.js)
 - [golang](./reorderList.go)
+
+**划分字母区间**
+- [JavaScript](./partitionLabels.js)
+- [golang](./partitionLabels.go)
