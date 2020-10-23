@@ -208,6 +208,10 @@
 - [JavaScript](./isLongPressedName.js)
 - [golang](./isLongPressedName.go)
 
+**回文链表**
+- [JavaScript](./isPalindromeLink.js)
+- [golang](./isPalindromeLink.go)
+
 ### 中等
 
 **子集**
@@ -253,7 +257,7 @@
 **划分字母区间**
 - [JavaScript](./partitionLabels.js)
 - [golang](./partitionLabels.go)
-- 
+
 ## 困难
 
 **N皇后 II**
