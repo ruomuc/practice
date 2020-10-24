@@ -258,6 +258,10 @@
 - [JavaScript](./partitionLabels.js)
 - [golang](./partitionLabels.go)
 
+**视频拼接**
+- [JavaScript](./videoStitching.js)
+- [golang](./videoStitching.go)
+
 ## 困难
 
 **N皇后 II**
