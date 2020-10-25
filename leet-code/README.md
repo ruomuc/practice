@@ -262,6 +262,10 @@
 - [JavaScript](./videoStitching.js)
 - [golang](./videoStitching.go)
 
+**数组中的最长山脉**
+- [JavaScript](./longestMountain.js)
+- [golang](./longestMountain.go)
+
 ## 困难
 
 **N皇后 II**
