@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func findMaxForm(strs []string, m int, n int) int {
 	dp := make([][]int, m+1)
 	for i := range dp {
@@ -22,7 +20,6 @@ func findMaxForm(strs []string, m int, n int) int {
 			}
 		}
 	}
-	fmt.Printf("%#v", dp)
 	return dp[m][n]
 }
 
