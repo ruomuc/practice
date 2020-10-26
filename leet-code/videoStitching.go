@@ -1,3 +1,5 @@
+package main
+
 func videoStitching(clips [][]int, T int) int {
 	ans := 0
 	maxRange := make([]int, T)
