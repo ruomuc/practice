@@ -274,6 +274,10 @@
 - [JavaScript](./preorderTraversal.js)
 - [golang](./preorderTraversal.go)
 
+**根据前序和后序遍历构造二叉树**
+- [JavaScript](./constructFromPrePost.js)
+- [golang](./constructFromPrePost.go)
+
 ## 困难
 
 **N皇后 II**
