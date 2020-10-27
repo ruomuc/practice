@@ -270,6 +270,10 @@
 - [JavaScript](./findMaxForm.js)
 - [golang](./findMaxForm.go)
 
+**二叉树的前序遍历**
+- [JavaScript](./preorderTraversal.js)
+- [golang](./preorderTraversal.go)
+
 ## 困难
 
 **N皇后 II**
