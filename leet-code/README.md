@@ -212,6 +212,10 @@
 - [JavaScript](./isPalindromeLink.js)
 - [golang](./isPalindromeLink.go)
 
+**独一无二的出现次数**
+- [JavaScript](./uniqueOccurrences.js)
+- [golang](./uniqueOccurrences.go)
+
 ### 中等
 
 **子集**
