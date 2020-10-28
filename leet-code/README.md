@@ -282,6 +282,11 @@
 - [JavaScript](./constructFromPrePost.js)
 - [golang](./constructFromPrePost.go)
 
+**目标和**
+- [JavaScript](./findTargetSumWays.js)
+- [golang](./findTargetSumWays.go)
+
+
 ## 困难
 
 **N皇后 II**
