@@ -286,6 +286,10 @@
 - [JavaScript](./findTargetSumWays.js)
 - [golang](./findTargetSumWays.go)
 
+**求根到叶子节点数字之和**
+- [JavaScript](./sumNumbers.js)
+- [golang](./sumNumbers.go)
+
 
 ## 困难
 
