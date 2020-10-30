@@ -216,6 +216,10 @@
 - [JavaScript](./uniqueOccurrences.js)
 - [golang](./uniqueOccurrences.go)
 
+**岛屿的周长**
+- [JavaScript](./islandPerimeter.js)
+- [golang](./islandPerimeter.go)
+
 ### 中等
 
 **子集**
@@ -297,3 +301,6 @@
 - [JavaScript](./totalNQueens.js)
 - [golang](./totalNQueens.go)
 
+**盈利计划**
+- [JavaScript](./profitableSchemes.js)
+- [golang](./profitableSchemes.go)
