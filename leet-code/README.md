@@ -304,3 +304,7 @@
 **盈利计划**
 - [JavaScript](./profitableSchemes.js)
 - [golang](./profitableSchemes.go)
+
+**O(1) 时间插入、删除和获取随机元素 - 允许重复**
+- [JavaScript](./RandomizedCollection.js)
+- [golang](./RandomizedCollection.go)
