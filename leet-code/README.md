@@ -280,6 +280,11 @@
 - [JavaScript](./intersection.js)
 - [golang](./intersection.go)
 
+**有效的山脉数组**
+
+- [JavaScript](./validMountainArray.js)
+- [golang](./validMountainArray.go)
+
 ### 中等
 
 **子集**
