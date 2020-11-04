@@ -403,3 +403,8 @@
 
 - [JavaScript](./wordBreak.js)
 - [golang](./wordBreak.go)
+
+**插入区间**
+
+- [JavaScript](./insert.js)
+- [golang](./insert.go)
