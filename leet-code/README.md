@@ -382,6 +382,11 @@
 - [JavaScript](./coinChange.js)
 - [golang](./coinChange.go)
 
+**单词接龙**
+
+- [JavaScript](./ladderLength.js)
+- [golang](./ladderLength.go)
+
 ## 困难
 
 **N 皇后 II**
