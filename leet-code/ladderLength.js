@@ -132,4 +132,6 @@ var ladderLength = function (beginWord, endWord, wordList) {
   }
   return 0
 }
-console.log(ladderLength('a', 'c', ['a', 'b', 'c']))
+console.log(ladderLength("hit",
+"cog",
+["hot","dot","dog","lot","log"]))
