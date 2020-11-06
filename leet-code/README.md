@@ -285,6 +285,10 @@
 - [JavaScript](./validMountainArray.js)
 - [golang](./validMountainArray.go)
 
+**根据数字二进制下 1 的数目排序**
+- [JavaScript](./sortByBits.js)
+- [golang](./sortByBits.go)
+
 ### 中等
 
 **子集**
