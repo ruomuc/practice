@@ -417,3 +417,8 @@
 
 - [JavaScript](./insert.js)
 - [golang](./insert.go)
+
+**区间和的个数**
+
+- [JavaScript](./countRangeSum.js)
+- [golang](./countRangeSum.go)
