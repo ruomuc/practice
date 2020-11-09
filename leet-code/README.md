@@ -395,6 +395,11 @@
 - [JavaScript](./ladderLength.js)
 - [golang](./ladderLength.go)
 
+**最接近原点的 K 个点**
+
+- [JavaScript](./kClosest.js)
+- [golang](./kClosest.go)
+
 ## 困难
 
 **N 皇后 II**
