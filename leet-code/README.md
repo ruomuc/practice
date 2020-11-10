@@ -286,10 +286,12 @@
 - [golang](./validMountainArray.go)
 
 **根据数字二进制下 1 的数目排序**
+
 - [JavaScript](./sortByBits.js)
 - [golang](./sortByBits.go)
 
 **买卖股票的最佳时机 II**
+
 - [JavaScript](./maxProfit2.js)
 - [golang](./maxProfit2.go)
 
@@ -399,6 +401,11 @@
 
 - [JavaScript](./kClosest.js)
 - [golang](./kClosest.go)
+
+**下一个排列**
+
+- [JavaScript](./nextPermutation.js)
+- [golang](./nextPermutation.go)
 
 ## 困难
 
