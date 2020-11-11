@@ -438,3 +438,8 @@
 
 - [JavaScript](./countRangeSum.js)
 - [golang](./countRangeSum.go)
+
+**自由之路**
+
+- [JavaScript](./findRotateSteps.js)
+- [golang](./findRotateSteps.go)
