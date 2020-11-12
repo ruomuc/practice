@@ -38,4 +38,52 @@ function getIdx (str, v) {
   return str.codePointAt(v) - 'a'.codePointAt(0)
 }
 
+// console.log(findRotateSteps('godding', 'gd'))
+
+var findRotateSteps = function (ring, key) {
+  let m = ring.length
+  let n = key.length
+  const dp = new Array(m).fill(Number.MAX_SAFE_INTEGER)
+
+  const pos = new Array(26).fill(0).map(item => [])
+  for (let i = 0; i < m; i++) {
+    pos[getIdx(ring, i)].push(i)
+  }
+  for (const item of pos[getIdx(key, 0)]) {
+    // +1 代表按下那一步
+    dp[item] = Math.min(item, m - item) + 1
+  }
+
+  // for (let i = 1; i < n; i++) {
+  //   for (const j of pos[getIdx(key, i)]) {
+  //     for (const k of pos[getIdx(key, i - 1)]) {
+  //       dp[j] = Math.min(
+  //         dp[j],
+  //         dp[k] + Math.min(Math.abs(j - k), m - Math.abs(j - k)) + 1
+  //       )
+  //     }
+  //   }
+  // }
+
+  for (let i = 1; i < n; i++) {
+    for (let j = pos[getIdx(key, i)].length - 1; j >= 0; j--) {
+      const jv = pos[getIdx(key, i)][j]
+      for (let k = pos[getIdx(key, i - 1)].length - 1; k >= 0; k--) {
+        const kv = pos[getIdx(key, i - 1)][k]
+        console.log(jv, k, kv)
+        dp[jv] = Math.min(
+          dp[jv],
+          dp[kv] + Math.min(Math.abs(jv - kv), m - Math.abs(jv - kv)) + 1
+        )
+      }
+    }
+  }
+
+  let min = Number.MAX_SAFE_INTEGER
+  for (let i = 0; i < m; i++) {
+    if (ring[i] === key[n - 1]) {
+      
+    }
+  }
+}
 console.log(findRotateSteps('godding', 'gd'))
