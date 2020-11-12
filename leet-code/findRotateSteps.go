@@ -23,8 +23,8 @@ func findRotateSteps(ring string, key string) int {
 	}
 
 	for i := 1; i < n; i++ {
-		for _,j := range pos[key[i]-'a'] {
-			for _,k := range pos[key[i-1]-'a'] {
+		for _, j := range pos[key[i]-'a'] {
+			for _, k := range pos[key[i-1]-'a'] {
 				dp[i][j] = min(dp[i][j], dp[i-1][k]+min(abs(j-k), m-abs(j-k))+1)
 			}
 		}
