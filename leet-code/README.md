@@ -412,6 +412,11 @@
 - [JavaScript](./nextPermutation.js)
 - [golang](./nextPermutation.go)
 
+**奇偶链表**
+
+- [JavaScript](./oddEvenList.js)
+- [golang](./oddEvenList.go)
+
 ## 困难
 
 **N 皇后 II**
