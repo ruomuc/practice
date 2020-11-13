@@ -62,7 +62,7 @@ function getIdx (str, v) {
 //         const kv = pos[getIdx(key, i - 1)][k]
 //         console.log(dp)
 
-//         dp[jv] = 
+//         dp[jv] =
 //           dp[kv] + Math.min(Math.abs(jv - kv), m - Math.abs(jv - kv)) + 1
 //       }
 //     }
@@ -77,3 +77,41 @@ function getIdx (str, v) {
 //   return min
 // }
 // console.log(findRotateSteps('godding', 'godding'))
+
+var findRotateSteps = function (ring, key) {
+  let ringMap = new Map()
+  for (let i = 0; i < ring.length; i++) {
+    if (ringMap.has(ring[i])) {
+      ringMap.set(ring[i], ringMap.get(ring[i]).concat([i]))
+    } else {
+      ringMap.set(ring[i], [i])
+    }
+  }
+
+  // 记忆化搜索
+  const memo = new Array(ring.length).fill(0).map(item => {
+    return new Array(key.length).fill(-1)
+  })
+
+  const dfs = function (ringIdx, keyIdx) {
+    if (keyIdx >= key.length) {
+      return 0
+    }
+    if (memo[ringIdx][keyIdx] > 0) {
+      return memo[ringIdx][keyIdx]
+    }
+    let curr = key[keyIdx]
+    let res = Number.MAX_SAFE_INTEGER
+    for (const targerIdx of ringMap.get(curr)) {
+      console.log(targerIdx)
+      const d1 = Math.abs(ringIdx - targerIdx)
+      const d2 = ring.length - d1
+      res = Math.min(res, Math.min(d1, d2) + dfs(targerIdx, keyIdx + 1))
+    }
+    memo[ringIdx][keyIdx] = res
+    return res
+  }
+  // 为什么要加上key.length呢。key.length是按按钮的次数
+  return key.length + dfs(0, 0)
+}
+console.log(findRotateSteps('godding', 'gd'))
