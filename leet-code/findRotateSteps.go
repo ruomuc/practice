@@ -45,3 +45,47 @@ func abs(a int) int {
 	}
 	return a
 }
+
+func findRotateSteps2(ring string, key string) int {
+	ringMap := make(map[rune][]int)
+	for i, v := range ring {
+		_, ok := ringMap[v]
+		if ok {
+			ringMap[v] = append(ringMap[v], i)
+		} else {
+			ringMap[v] = []int{i}
+		}
+	}
+
+	memo := make([][]int, 0)
+	for i := 0; i < len(ring); i++ {
+		si := make([]int, 0)
+		for j := 0; j < len(key); j++ {
+			si = append(si, -1)
+		}
+		memo = append(memo, si)
+	}
+
+	var dfs func(ringIdx int, keyIdx int) int
+	dfs = func(ringIdx, keyIdx int) int {
+		if keyIdx >= len(key) {
+			return 0
+		}
+
+		if memo[ringIdx][keyIdx] >= 0 {
+			return memo[ringIdx][keyIdx]
+		}
+
+		curr := rune(key[keyIdx])
+		res := math.MaxInt64
+		idxSet, _ := ringMap[curr]
+		for _, targetIdx := range idxSet {
+			d1 := abs(ringIdx - targetIdx)
+			d2 := len(ring) - d1
+			res = min(res, min(d1, d2)+dfs(targetIdx, keyIdx+1))
+		}
+		memo[ringIdx][keyIdx] = res
+		return res
+	}
+	return len(key) + dfs(0, 0)
+}
