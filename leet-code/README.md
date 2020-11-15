@@ -423,6 +423,10 @@
 - [JavaScript](./oddEvenList.js)
 - [golang](./oddEvenList.go)
 
+**移掉K位数字**
+
+- [JavaScript](./removeKdigits.js)
+- [golang](./removeKdigits.go)
 ## 困难
 
 **N 皇后 II**
