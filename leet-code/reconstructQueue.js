@@ -3,38 +3,43 @@
  * @return {number[][]}
  */
 var reconstructQueue = function (people) {
-  const emptyMap = new Map()
+  const m = people.length
+  const res = new Array(m)
   people.sort((a, b) => {
     if (a[0] === b[0]) {
-      return a[1] - b[1]
+      return b[1] - a[1]
     }
     return a[0] - b[0]
   })
-
-  for (let i = 0; i < people.length; i++) {
-    emptyMap.set(i, i)
-  }
-  console.log(people, emptyMap)
-  for (let i = 0; i < people.length; i++) {
-    const idx = emptyMap.get(people[i][1])
-    let temp = people[i]
-    people[i] = people[idx]
-    people[idx] = temp
-    // 更新一下空白位置
-    for (const item of emptyMap) {
-      
+  console.log(people)
+  for (let i = 0; i < m; i++) {
+    let size = people[i][1]
+    for (let j = 0; j < m; j++) {
+      if (res[j] == null) {
+        if (size === 0) {
+          res[j] = people[i]
+          console.log(res[j], j)
+          break
+        }
+        size--
+      }
     }
   }
-  console.log(people)
+  console.log(res)
+  return res
 }
 
 console.log(
   reconstructQueue([
+    [9, 0],
     [7, 0],
-    [4, 4],
-    [7, 1],
-    [5, 0],
-    [6, 1],
+    [1, 9],
+    [3, 0],
+    [2, 7],
+    [5, 3],
+    [6, 0],
+    [3, 4],
+    [6, 2],
     [5, 2]
   ])
 )
