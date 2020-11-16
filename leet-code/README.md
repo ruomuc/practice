@@ -427,6 +427,12 @@
 
 - [JavaScript](./removeKdigits.js)
 - [golang](./removeKdigits.go)
+
+**根据身高重建队列**
+
+- [JavaScript](./reconstructQueue.js)
+- [golang](./reconstructQueue.go)
+
 ## 困难
 
 **N 皇后 II**
