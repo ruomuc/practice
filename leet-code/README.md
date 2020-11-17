@@ -305,6 +305,10 @@
 - [JavaScript](./relativeSortArray.js)
 - [golang](./relativeSortArray.go)
 
+**距离顺序排列矩阵单元格**
+
+- [JavaScript](./allCellsDistOrder.js)
+- [golang](./allCellsDistOrder.go)
 
 ### 中等
 
