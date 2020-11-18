@@ -427,7 +427,7 @@
 - [JavaScript](./oddEvenList.js)
 - [golang](./oddEvenList.go)
 
-**移掉K位数字**
+**移掉 K 位数字**
 
 - [JavaScript](./removeKdigits.js)
 - [golang](./removeKdigits.go)
@@ -436,6 +436,11 @@
 
 - [JavaScript](./reconstructQueue.js)
 - [golang](./reconstructQueue.go)
+
+**加油站**
+
+- [JavaScript](./canCompleteCircuit.js)
+- [golang](./canCompleteCircuit.go)
 
 ## 困难
 
