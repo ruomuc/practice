@@ -310,6 +310,11 @@
 - [JavaScript](./allCellsDistOrder.js)
 - [golang](./allCellsDistOrder.go)
 
+**移动零**
+
+- [JavaScript](./moveZeroes.js)
+- [golang](./moveZeroes.go)
+
 ### 中等
 
 **子集**
