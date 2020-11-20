@@ -447,6 +447,11 @@
 - [JavaScript](./canCompleteCircuit.js)
 - [golang](./canCompleteCircuit.go)
 
+**对链表进行插入排序**
+
+- [JavaScript](./insertionSortList.js)
+- [golang](./insertionSortList.go)
+
 ## 困难
 
 **N 皇后 II**
