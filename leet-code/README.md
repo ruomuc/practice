@@ -452,6 +452,11 @@
 - [JavaScript](./insertionSortList.js)
 - [golang](./insertionSortList.go)
 
+**排序链表**
+
+- [JavaScript](./sortList.js)
+- [golang](./sortList.go)
+
 ## 困难
 
 **N 皇后 II**
