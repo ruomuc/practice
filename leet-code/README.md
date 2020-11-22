@@ -315,6 +315,11 @@
 - [JavaScript](./moveZeroes.js)
 - [golang](./moveZeroes.go)
 
+**有效的字母异位词**
+
+- [JavaScript](./isAnagram.js)
+- [golang](./isAnagram.go)
+
 ### 中等
 
 **子集**
