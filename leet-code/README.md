@@ -462,6 +462,11 @@
 - [JavaScript](./sortList.js)
 - [golang](./sortList.go)
 
+**用最少数量的箭引爆气球**
+
+- [JavaScript](./findMinArrowShots.js)
+- [golang](./findMinArrowShots.go)
+
 ## 困难
 
 **N 皇后 II**
