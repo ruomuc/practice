@@ -467,6 +467,11 @@
 - [JavaScript](./findMinArrowShots.js)
 - [golang](./findMinArrowShots.go)
 
+**完全二叉树的节点个数**
+
+- [JavaScript](./countNodes.js)
+- [golang](./countNodes.go)
+
 ## 困难
 
 **N 皇后 II**
