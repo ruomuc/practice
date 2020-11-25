@@ -25,7 +25,7 @@ func commonChars(A []string) []string {
 
 	for i, v := range minFreq {
 		for j := 0; j < v; j++ {
-			ans = append(ans, string(i+'a'))
+			ans = append(ans, string(rune(i)+'a'))
 		}
 	}
 	return ans
