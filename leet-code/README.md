@@ -513,3 +513,8 @@
 
 - [JavaScript](./findRotateSteps.js)
 - [golang](./findRotateSteps.go)
+
+**最大间距**
+
+- [JavaScript](./maximumGap.js)
+- [golang](./maximumGap.go)
