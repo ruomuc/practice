@@ -477,6 +477,11 @@
 - [JavaScript](./countNodes.js)
 - [golang](./countNodes.go)
 
+**四数相加 II**
+
+- [JavaScript](./fourSumCount.js)
+- [golang](./fourSumCount.go)
+
 ## 困难
 
 **N 皇后 II**
