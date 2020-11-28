@@ -523,3 +523,8 @@
 
 - [JavaScript](./maximumGap.js)
 - [golang](./maximumGap.go)
+
+**翻转对**
+
+- [JavaScript](./reversePairs.js)
+- [golang](./reversePairs.go)
