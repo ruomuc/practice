@@ -325,6 +325,11 @@
 - [JavaScript](./sortString.js)
 - [golang](./sortString.go)
 
+**三角形的最大周长**
+
+- [JavaScript](./largestPerimeter.js)
+- [golang](./largestPerimeter.go)
+
 ### 中等
 
 **子集**
