@@ -487,6 +487,11 @@
 - [JavaScript](./fourSumCount.js)
 - [golang](./fourSumCount.go)
 
+**重构字符串**
+
+- [JavaScript](./reorganizeString.js)
+- [golang](./reorganizeString.go)
+
 ## 困难
 
 **N 皇后 II**
