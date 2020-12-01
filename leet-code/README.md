@@ -492,6 +492,11 @@
 - [JavaScript](./reorganizeString.js)
 - [golang](./reorganizeString.go)
 
+**在排序数组中查找元素的第一个和最后一个位置**
+
+- [JavaScript](./searchRange.js)
+- [golang](./searchRange.go)
+
 ## 困难
 
 **N 皇后 II**
