@@ -543,3 +543,8 @@
 
 - [JavaScript](./reversePairs.js)
 - [golang](./reversePairs.go)
+
+**拼接最大数**
+
+- [JavaScript](./maxNumber.js)
+- [golang](./maxNumber.go)
