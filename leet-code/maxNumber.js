@@ -17,70 +17,84 @@ var maxNumber = function (nums1, nums2, k) {
       }
       stack.push(nums[i])
     }
-    // console.log('nums,k=', stack, nums, k, n - k)
     k > 0 ? stack.splice(-k) : stack
     return stack
   }
 
-  var merge = function (n1, n2) {
-    // console.log('merge=', n1, n2)
-    let temp = []
-    while (n1.length != 0 || n2.length != 0) {
-      if (n1[0] >= n2[0]) {
-        temp.push(n1[0])
-        n1.shift()
-      } else {
-        temp.push(n2[0])
-        n2.shift()
-      }
-      // console.log('n1,n2=', temp, n1, n2)
-      if (n2.length === 0) {
-        temp = temp.concat(n1)
-        break
-      }
-      if (n1.length === 0) {
-        temp = temp.concat(n2)
-        break
-      }
-    }
-    console.log('temp=', temp)
-    return temp
-  }
-
-  var arrmax = function (arr1, arr2) {
-    console.log(arr1, arr2)
-    const l1 = arr1.length
-    const l2 = arr2.length
-    if (l1 > l2) {
-      return arr1
-    }
-    if (l1 < l2) {
-      return arr2
-    }
-    for (let i = 0; i < l1; i++) {
-      if (arr1[i] > arr2[i]) {
-        return arr1
-      }
-      if (arr2[i] > arr1[i]) {
-        return arr2
-      }
-    }
-    // 全部相等,随便返回一个
-    return arr1
-  }
-
   let res = []
   for (let i = 0; i <= k; i++) {
-    if (i <= l1 && k - i <= l2) {
-      // console.log('i,k=', i, k - i, res)
+    rest1 = l1 - i
+    rest2 = l2 - k + i
+    if (rest1 >= 0 && rest2 >= 0 && rest1 <= l1 && rest2 <= l2) {
       res = arrmax(
         res,
-        merge(getMaxNumbers(nums1, i), getMaxNumbers(nums2, k - i))
+        merge(getMaxNumbers(nums1, l1 - i), getMaxNumbers(nums2, l2 - k + i))
       )
-      console.log('res=', res)
     }
   }
   return res
 }
 
+function arrmax (arr1, arr2) {
+  const l1 = arr1.length
+  const l2 = arr2.length
+  if (l1 > l2) {
+    return arr1
+  }
+  if (l1 < l2) {
+    return arr2
+  }
+  for (let i = 0; i < l1; i++) {
+    if (arr1[i] > arr2[i]) {
+      return arr1
+    }
+    if (arr2[i] > arr1[i]) {
+      return arr2
+    }
+  }
+  // 全部相等,随便返回一个
+  return arr1
+}
+
+function merge (subsequence1, subsequence2) {
+  const x = subsequence1.length,
+    y = subsequence2.length
+  if (x === 0) {
+    return subsequence2
+  }
+  if (y === 0) {
+    return subsequence1
+  }
+  const mergeLength = x + y
+  const merged = new Array(mergeLength).fill(0)
+  let index1 = 0,
+    index2 = 0
+  for (let i = 0; i < mergeLength; i++) {
+    if (compare(subsequence1, index1, subsequence2, index2) > 0) {
+      merged[i] = subsequence1[index1++]
+    } else {
+      merged[i] = subsequence2[index2++]
+    }
+  }
+  return merged
+}
+
+function compare (subsequence1, index1, subsequence2, index2) {
+  const x = subsequence1.length,
+    y = subsequence2.length
+  while (index1 < x && index2 < y) {
+    const difference = subsequence1[index1] - subsequence2[index2]
+    if (difference !== 0) {
+      return difference
+    }
+    index1++
+    index2++
+  }
+  return x - index1 - (y - index2)
+}
+
+console.log(maxNumber([3, 4, 6, 5], [9, 1, 2, 5, 8, 3], 5))
+console.log(maxNumber([6, 7], [6, 0, 4], 5))
+console.log(maxNumber([3, 9], [8, 9], 3))
+console.log(maxNumber([8, 6, 9], [1, 7, 5], 3))
 console.log(maxNumber([6, 7], [6, 0, 4], 5))
