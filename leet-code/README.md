@@ -330,6 +330,11 @@
 - [JavaScript](./largestPerimeter.js)
 - [golang](./largestPerimeter.go)
 
+**计数质数**
+
+- [JavaScript](./countPrimes.js)
+- [golang](./countPrimes.go)
+
 ### 中等
 
 **子集**
