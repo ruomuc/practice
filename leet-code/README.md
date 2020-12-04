@@ -502,6 +502,11 @@
 - [JavaScript](./searchRange.js)
 - [golang](./searchRange.go)
 
+**分割数组为连续子序列**
+
+- [JavaScript](./isPossible.js)
+- [golang](./isPossible.go)
+
 ## 困难
 
 **N 皇后 II**
