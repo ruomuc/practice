@@ -507,6 +507,11 @@
 - [JavaScript](./isPossible.js)
 - [golang](./isPossible.go)
 
+**任务调度器**
+
+- [JavaScript](./leastInterval.js)
+- [golang](./leastInterval.go)
+
 ## 困难
 
 **N 皇后 II**
