@@ -65,7 +65,7 @@ func canCompleteCircuit3(gas []int, cost []int) int {
 		if curr == n {
 			// 如果走完了，返回i
 			return i
-		} else {
+		} else r
 			// 如果没走完，那么在i~curr这段中任意起点都走不完。所以i放到curr+1位置
 			i = i + curr + 1
 		}
