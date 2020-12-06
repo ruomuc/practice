@@ -335,6 +335,11 @@
 - [JavaScript](./countPrimes.js)
 - [golang](./countPrimes.go)
 
+**杨辉三角**
+
+- [JavaScript](./generate.js)
+- [golang](./generate.go)
+
 ### 中等
 
 **子集**
