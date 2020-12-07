@@ -517,6 +517,11 @@
 - [JavaScript](./leastInterval.js)
 - [golang](./leastInterval.go)
 
+**翻转矩阵后的得分**
+
+- [JavaScript](./matrixScore.js)
+- [golang](./matrixScore.go)
+
 ## 困难
 
 **N 皇后 II**
