@@ -522,6 +522,11 @@
 - [JavaScript](./matrixScore.js)
 - [golang](./matrixScore.go)
 
+**将数组拆分成斐波那契序列**
+
+- [JavaScript](./splitIntoFibonacci.js)
+- [golang](./splitIntoFibonacci.go)
+
 ## 困难
 
 **N 皇后 II**
