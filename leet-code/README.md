@@ -526,6 +526,11 @@
 
 - [JavaScript](./splitIntoFibonacci.js)
 - [golang](./splitIntoFibonacci.go)
+ 
+**不同路径**
+
+- [JavaScript](./uniquePaths.js)
+- [golang](./uniquePaths.go)
 
 ## 困难
 
