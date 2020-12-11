@@ -531,11 +531,16 @@
 
 - [JavaScript](./splitIntoFibonacci.js)
 - [golang](./splitIntoFibonacci.go)
- 
+
 **不同路径**
 
 - [JavaScript](./uniquePaths.js)
 - [golang](./uniquePaths.go)
+
+**Dota2 参议院**
+
+- [JavaScript](./predictPartyVictory.js)
+- [golang](./predictPartyVictory.go)
 
 ## 困难
 
