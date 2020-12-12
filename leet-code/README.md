@@ -542,6 +542,11 @@
 - [JavaScript](./predictPartyVictory.js)
 - [golang](./predictPartyVictory.go)
 
+**摆动序列**
+
+- [JavaScript](./wiggleMaxLength.js)
+- [golang](./wiggleMaxLength.go)
+
 ## 困难
 
 **N 皇后 II**
