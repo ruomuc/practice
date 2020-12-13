@@ -345,6 +345,11 @@
 - [JavaScript](./lemonadeChange.js)
 - [golang](./lemonadeChange.go)
 
+**存在重复元素**
+
+- [JavaScript](./containsDuplicate.js)
+- [golang](./containsDuplicate.go)
+
 ### 中等
 
 **子集**
