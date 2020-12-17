@@ -562,6 +562,11 @@
 - [JavaScript](./maxProfit3.js)
 - [golang](./maxProfit3.go)
 
+**单调递增的数字**
+
+- [JavaScript](./monotoneIncreasingDigits.js)
+- [golang](./monotoneIncreasingDigits.go)
+
 ## 困难
 
 **N 皇后 II**
