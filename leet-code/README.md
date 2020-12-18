@@ -1,7 +1,10 @@
 ## leet-code
 
 因为力扣做题界面没有 vscode 方便，所以代码我会在这里写好复制过去执行提交，然后就存下来了。。
+
 因为最近在看`go`，时间允许会用多种语言实现一下
+
+ps: 如果太简单了就只用一种 懒~
 
 ### 简单
 
@@ -349,6 +352,10 @@
 
 - [JavaScript](./containsDuplicate.js)
 - [golang](./containsDuplicate.go)
+
+**找不同**
+
+- [JavaScript](./findTheDifference.js)
 
 ### 中等
 
