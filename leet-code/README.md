@@ -574,6 +574,11 @@ ps: 如果太简单了就只用一种 懒~
 - [JavaScript](./monotoneIncreasingDigits.js)
 - [golang](./monotoneIncreasingDigits.go)
 
+**去除重复字母**
+
+- [JavaScript](./removeDuplicateLetters.js)
+- [golang](./removeDuplicateLetters.go)
+
 ## 困难
 
 **N 皇后 II**
