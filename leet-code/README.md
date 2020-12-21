@@ -357,6 +357,10 @@ ps: 如果太简单了就只用一种 懒~
 
 - [JavaScript](./findTheDifference.js)
 
+**使用最小花费爬楼梯**
+
+- [golang](./minCostClimbingStairs.go)
+
 ### 中等
 
 **子集**
