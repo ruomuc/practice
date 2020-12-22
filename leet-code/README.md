@@ -588,6 +588,10 @@ ps: 如果太简单了就只用一种 懒~
 - [JavaScript](./rotate.js)
 - [golang](./rotate.go)
 
+**二叉树的锯齿形层序遍历**
+
+- [JavaScript](./zigzagLevelOrder.js)
+- [golang](./zigzagLevelOrder.go)
 
 ## 困难
 
