@@ -593,6 +593,10 @@ ps: 如果太简单了就只用一种 懒~
 - [JavaScript](./zigzagLevelOrder.js)
 - [golang](./zigzagLevelOrder.go)
 
+**字符串中的第一个唯一字符**
+
+- [golang](./firstUniqChar.go)
+
 ## 困难
 
 **N 皇后 II**
