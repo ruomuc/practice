@@ -648,3 +648,8 @@ ps: 如果太简单了就只用一种 懒~
 
 - [JavaScript](./maxNumber.js)
 - [golang](./maxNumber.go)
+
+**分发糖果**
+
+- [JavaScript](./candy.js)
+- [golang](./candy.go)
