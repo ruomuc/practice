@@ -658,3 +658,8 @@ ps: 如果太简单了就只用一种 懒~
 
 - [JavaScript](./candy.js)
 - [golang](./candy.go)
+
+**最大矩形**
+
+- [JavaScript](./maximalRectangle.js)
+- [golang](./maximalRectangle.go)
