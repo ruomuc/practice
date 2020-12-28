@@ -79,7 +79,6 @@ var dfs = function (profitMap, prices, index, status, k) {
   // 从缓存中找
   const cache = profitMap[index][status][k]
   if (cache > 0) {
-    console.log('cache', cache)
     return cache
   }
 
@@ -98,6 +97,50 @@ var dfs = function (profitMap, prices, index, status, k) {
   const max = Math.max(a, b, c)
   // 存入缓存
   profitMap[index][status][k] = max
+  return max
+}
+
+console.log(maxProfit([3, 3, 5, 0, 0, 3, 1, 4]))
+
+//================动态规划========================//
+//=golang的递归+记忆化搜索也超时了，只能动态规划了=//
+//================================================//
+//================================================//
+
+var maxProfit = function (prices) {
+  const m = prices.length
+  if (m === 0) {
+    return 0
+  }
+
+  // dp[i][j][k] i-代表第几天 j-代表交易了多少次 k-代表当前买卖状态
+  // 本题交易次数默认为2
+  const dp = new Array(m).fill(0).map(item => {
+    return new Array(3).fill(0).map(item => {
+      return new Array(2).fill(0)
+    })
+  })
+
+  // 初始化第一天的数据
+  for (let i = 0; i <= 2; i++) {
+    dp[0][i][1] = -prices[0]
+  }
+
+  for (let i = 1; i < m; i++) {
+    for (let j = 0; j <= 2; j++) {
+      if (j < 2) {
+        dp[i][j][0] = Math.max(dp[i - 1][j][0], dp[i - 1][j + 1][1] + prices[i])
+      } else {
+        dp[i][j][0] = dp[i - 1][j][0]
+      }
+      dp[i][j][1] = Math.max(dp[i - 1][j][1], dp[i - 1][j][0] - prices[i])
+    }
+  }
+
+  let max = 0
+  for (let i = 0; i < 3; i++) {
+    max = Math.max(max, dp[m - 1][i][0])
+  }
   return max
 }
 
