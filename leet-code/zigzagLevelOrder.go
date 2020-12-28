@@ -1,4 +1,10 @@
 package main
+
+import (
+	"fmt"
+	"reflect"
+)
+
 /**
  * Definition for a binary tree node.
  * type TreeNode struct {
@@ -7,43 +13,44 @@ package main
  *     Right *TreeNode
  * }
  */
- func zigzagLevelOrder(root *TreeNode) [][]int {
-	var queue []*TreeNode 
+func zigzagLevelOrder(root *TreeNode) [][]int {
+	var queue []*TreeNode
 	var level int
 	var res [][]int
-	if root == nil{
-			return res
+	if root == nil {
+		return res
 	}
 
-	queue = append(queue,root)
+	queue = append(queue, root)
 	for len(queue) > 0 {
 		size := len(queue)
-		tempRes := make([]int,0)
-		for i:=0;i<size;i++{
+		tempRes := make([]int, 0)
+		for i := 0; i < size; i++ {
 			temp := queue[i]
-			tempRes = append(tempRes,temp.Val)
-			if temp.Right != nil{
-				queue = append(queue,temp.Right)
+			tempRes = append(tempRes, temp.Val)
+			if temp.Right != nil {
+				queue = append(queue, temp.Right)
 			}
-			if temp.Left != nil{
-				queue = append(queue,temp.Left)
+			if temp.Left != nil {
+				queue = append(queue, temp.Left)
 			}
 		}
-				fmt.Println(tempRes,level & 1)
-		if level & 1 == 0 {
+		fmt.Println(tempRes, level&1)
+		if level&1 == 0 {
 			ReverseSlice(tempRes)
 		}
-		res = append(res,tempRes)
+		res = append(res, tempRes)
 		queue = queue[size:]
-		level+=1
+		level++
 	}
 	return res
 }
 
+// ReverseSlice is ...
 func ReverseSlice(s interface{}) {
 	size := reflect.ValueOf(s).Len()
 	swap := reflect.Swapper(s)
 	for i, j := 0, size-1; i < j; i, j = i+1, j-1 {
-			swap(i, j)
+		swap(i, j)
 	}
 }

@@ -22,7 +22,6 @@ func predictPartyVictory(senate string) string {
 	}
 	if len(r) == 0 {
 		return "Radiant"
-	} else {
-		return "Dire"
 	}
+	return "Dire"
 }
