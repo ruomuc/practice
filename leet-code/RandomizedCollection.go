@@ -2,12 +2,13 @@ package main
 
 import "math/rand"
 
+// RandomizedCollection is ...
 type RandomizedCollection struct {
 	idxMap map[int]map[int]bool
 	nums   []int
 }
 
-/** Initialize your data structure here. */
+// Constructor is ...
 func Constructor() RandomizedCollection {
 	return RandomizedCollection{idxMap: map[int]map[int]bool{}}
 }

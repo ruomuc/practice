@@ -663,3 +663,13 @@ ps: 如果太简单了就只用一种 懒~
 
 - [JavaScript](./maximalRectangle.js)
 - [golang](./maximalRectangle.go)
+
+**买卖股票的最佳时机 III**
+
+- [JavaScript](./maxProfitiii.js)
+- [golang](./maxProfitiii.go)
+
+**买卖股票的最佳时机 IV**
+
+- [JavaScript](./maxProfitiv.js)
+- [golang](./maxProfitiv.go)
