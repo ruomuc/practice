@@ -677,3 +677,8 @@ ps: 如果太简单了就只用一种 懒~
 
 - [JavaScript](./maxProfitiv.js)
 - [golang](./maxProfitiv.go)
+
+**按要求补齐数组**
+
+- [JavaScript](./minPatches.js)
+- [golang](./minPatches.go)
