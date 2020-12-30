@@ -369,6 +369,10 @@ ps: 如果太简单了就只用一种 懒~
 
 - [golang](./isIsomorphic.go)
 
+**最后一块石头的重量**
+
+- [golang](./lastStoneWeight.go)
+
 
 ### 中等
 
