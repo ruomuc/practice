@@ -686,3 +686,8 @@ ps: 如果太简单了就只用一种 懒~
 
 - [JavaScript](./minPatches.js)
 - [golang](./minPatches.go)
+
+**滑动窗口最大值**
+
+- [JavaScript](./maxSlidingWindow.js)
+- [golang](./maxSlidingWindow.go)
