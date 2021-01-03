@@ -9,31 +9,25 @@ package main
  */
 
 func partition(head *ListNode, x int) *ListNode {
-	var front, s, l *ListNode
-	front = &ListNode{0, head}
+	if head == nil {
+		return nil
+	}
+	s, l := &ListNode{}, &ListNode{}
+	sHead := s
+	lHead := l
 
 	for head != nil {
 		if head.Val >= x {
-			if l == nil {
-				l = head
-				head = head.Next
-			} else {
-				l = head
-				head = head.Next
-			}
+			l.Next = head
+			l = l.Next
 		} else {
-			if s == nil {
-				s = head
-				if l != nil {
-					s.Next = front.Next
-				}
-				head = l.Next
-			} else {
-				head.Next = s.Next
-				s.Next = head
-				head = l.Next
-			}
+			s.Next = head
+			s = s.Next
 		}
+		head = head.Next
 	}
-	return front.Next
+	l.Next = nil
+	s.Next = lHead.Next
+
+	return sHead.Next
 }
