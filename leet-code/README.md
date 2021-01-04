@@ -373,6 +373,9 @@ ps: 如果太简单了就只用一种 懒~
 
 - [golang](./lastStoneWeight.go)
 
+**斐波那契数**
+
+- [golang](./fib.go)
 
 ### 中等
 
