@@ -381,6 +381,10 @@ ps: 如果太简单了就只用一种 懒~
 
 - [golang](./largeGroupPositions.go)
 
+**汇总区间**
+
+- [golang](./summaryRanges.go)
+
 ### 中等
 
 **子集**
