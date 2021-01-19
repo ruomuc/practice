@@ -653,6 +653,10 @@ ps: 如果太简单了就只用一种 懒~
 
 - [golang](./findRedundantConnection.js)
 
+**连接所有点的最小费用**
+
+-[golang](./minCostConnectPoints.go)
+
 ## 困难
 
 **N 皇后 II**
