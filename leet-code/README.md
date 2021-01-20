@@ -385,6 +385,10 @@ ps: 如果太简单了就只用一种 懒~
 
 - [golang](./summaryRanges.go)
 
+**三个数的最大乘积**
+
+- [golang](./maximumProduct.go)
+
 ### 中等
 
 **子集**
