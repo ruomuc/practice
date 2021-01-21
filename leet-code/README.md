@@ -747,3 +747,7 @@ ps: 如果太简单了就只用一种 懒~
 
 - [JavaScript](./sortItems.js)
 - [golang](./sortItems.go)
+
+**找到最小生成树里的关键边和伪关键边**
+
+- [golang](./findCriticalAndPseudoCriticalEdges.go)
