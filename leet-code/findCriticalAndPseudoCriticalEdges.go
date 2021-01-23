@@ -1,3 +1,5 @@
+package main
+
 import "sort"
 
 type unionFind struct {
