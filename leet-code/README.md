@@ -661,6 +661,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./minCostConnectPoints.go)
 
+**连通网络的操作次数**
+
+-[golang](./makeConnected.go)
+
 ## 困难
 
 **N 皇后 II**
