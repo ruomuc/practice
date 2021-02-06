@@ -1,10 +1,6 @@
 package main
 
-import (
-	"container/heap"
-	"sort"
-)
-
+/**
 var a []int
 
 type hp struct{ sort.IntSlice }
@@ -41,3 +37,5 @@ func maxSlidingWindow(nums []int, k int) []int {
 	}
 	return ans
 }
+
+*/

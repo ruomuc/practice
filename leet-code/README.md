@@ -381,6 +381,14 @@ ps: 如果太简单了就只用一种 懒~
 
 - [golang](./largeGroupPositions.go)
 
+**汇总区间**
+
+- [golang](./summaryRanges.go)
+
+**三个数的最大乘积**
+
+- [golang](./maximumProduct.go)
+
 ### 中等
 
 **子集**
@@ -637,6 +645,30 @@ ps: 如果太简单了就只用一种 懒~
 
 - [golang](./findCircleNum.go)
 
+**旋转数组**
+
+- [golang](./rotate2.go)
+
+**交换字符串中的元素**
+
+- [golang](./smallestStringWithSwaps.go)
+
+**冗余连接**
+
+- [golang](./findRedundantConnection.js)
+
+**连接所有点的最小费用**
+
+-[golang](./minCostConnectPoints.go)
+
+**连通网络的操作次数**
+
+-[golang](./makeConnected.go)
+
+**可获得的最大点数**
+
+-[golang](./maxScore.go)
+
 ## 困难
 
 **N 皇后 II**
@@ -718,3 +750,12 @@ ps: 如果太简单了就只用一种 懒~
 
 - [JavaScript](./maxSlidingWindow.js)
 - [golang](./maxSlidingWindow.go)
+
+**项目管理**
+
+- [JavaScript](./sortItems.js)
+- [golang](./sortItems.go)
+
+**找到最小生成树里的关键边和伪关键边**
+
+- [golang](./findCriticalAndPseudoCriticalEdges.go)
