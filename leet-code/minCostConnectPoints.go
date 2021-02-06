@@ -1,7 +1,6 @@
 package main
 
-import "sort"
-
+/**
 type unionFind struct {
 	parent []int
 	rank   []int // 按秩合并
@@ -81,3 +80,4 @@ func minCostConnectPoints(points [][]int) (ans int) {
 	}
 	return
 }
+*/
