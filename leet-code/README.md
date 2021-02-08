@@ -669,6 +669,11 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./maxScore.go)
 
+
+**可获得的最大点数**
+
+-[golang](./Pow(x,n).go)
+
 ## 困难
 
 **N 皇后 II**
