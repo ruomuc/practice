@@ -674,6 +674,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./Pow(x,n).go)
 
+**最长湍流子数组**
+
+-[golang](./maxTurbulenceSize.go)
+
 ## 困难
 
 **N 皇后 II**
