@@ -389,6 +389,10 @@ ps: 如果太简单了就只用一种 懒~
 
 - [golang](./maximumProduct.go)
 
+**数据流中的第 K 大元素**
+
+- [golang](./KthLargest.go)
+
 ### 中等
 
 **子集**
