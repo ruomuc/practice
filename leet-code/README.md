@@ -686,6 +686,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./checkInclusion.go)
 
+**最大连续1的个数 III**
+
+-[golang](./longestOnes.go)
+
 ## 困难
 
 **N 皇后 II**
