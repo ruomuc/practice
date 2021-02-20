@@ -393,6 +393,10 @@ ps: 如果太简单了就只用一种 懒~
 
 - [golang](./KthLargest.go)
 
+**数组的度**
+
+- [golang](./findShortestSubArray.go)
+
 ### 中等
 
 **子集**
