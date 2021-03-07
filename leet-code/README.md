@@ -702,6 +702,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./partition2.go)
 
+**下一个更大元素 II**
+
+-[golang](./nextGreaterElements.go)
+
 ## 困难
 
 **N 皇后 II**
