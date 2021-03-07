@@ -698,6 +698,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./longestSubstring.go)
 
+**分割回文串**
+
+-[golang](./partition2.go)
+
 ## 困难
 
 **N 皇后 II**
