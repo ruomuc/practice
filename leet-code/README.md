@@ -397,6 +397,15 @@ ps: 如果太简单了就只用一种 懒~
 
 - [golang](./findShortestSubArray.go)
 
+**设计哈希集合**
+
+- [golang](./MyHashSet.go)
+
+**设计哈希映射**
+
+- [golang](./MyHashMap2.go)
+
+
 ### 中等
 
 **子集**
@@ -705,6 +714,11 @@ ps: 如果太简单了就只用一种 懒~
 **下一个更大元素 II**
 
 -[golang](./nextGreaterElements.go)
+
+**验证二叉树的前序序列化**
+
+-[golang](./isValidSerialization.go)
+
 
 ## 困难
 
