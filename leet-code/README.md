@@ -719,6 +719,9 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./isValidSerialization.go)
 
+**螺旋矩阵 II**
+
+-[golang](./generateMatrix.go)
 
 ## 困难
 
