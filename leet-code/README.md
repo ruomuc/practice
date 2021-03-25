@@ -735,6 +735,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./setZeroes.go)
 
+**删除排序链表中的重复元素 II**
+
+-[golang](./deleteDuplicates.go)
+
 ## 困难
 
 **N 皇后 II**
