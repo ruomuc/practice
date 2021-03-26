@@ -405,6 +405,10 @@ ps: 如果太简单了就只用一种 懒~
 
 - [golang](./MyHashMap2.go)
 
+**删除排序链表中的重复元素**
+
+- [golang](./deleteDuplicates2.go)
+
 
 ### 中等
 
