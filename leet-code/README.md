@@ -409,6 +409,9 @@ ps: 如果太简单了就只用一种 懒~
 
 - [golang](./deleteDuplicates2.go)
 
+**颠倒二进制位**
+
+- [golang](./reverseBits.go)
 
 ### 中等
 
