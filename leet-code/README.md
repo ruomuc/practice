@@ -693,10 +693,9 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./maxScore.go)
 
-
 **可获得的最大点数**
 
--[golang](./Pow(x,n).go)
+-[golang](<./Pow(x,n).go>)
 
 **最长湍流子数组**
 
@@ -706,7 +705,7 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./checkInclusion.go)
 
-**最大连续1的个数 III**
+**最大连续 1 的个数 III**
 
 -[golang](./longestOnes.go)
 
@@ -757,6 +756,10 @@ ps: 如果太简单了就只用一种 懒~
 **搜索二维矩阵**
 
 -[golang](./searchMatrix.go)
+
+**笨阶乘**
+
+-[golang](./clumsy.go)
 
 ## 困难
 
