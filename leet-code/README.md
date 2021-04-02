@@ -855,3 +855,7 @@ ps: 如果太简单了就只用一种 懒~
 **俄罗斯套娃信封问题**
 
 - [golang](./maxEnvelopes.go)
+
+**直方图的水量**
+
+- [golang](./trap.go)
