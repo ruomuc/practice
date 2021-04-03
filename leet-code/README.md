@@ -761,6 +761,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./clumsy.go)
 
+**最长公共子序列**
+
+-[golang](./longestCommonSubsequence.go)
+
 ## 困难
 
 **N 皇后 II**
