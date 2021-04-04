@@ -765,6 +765,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./longestCommonSubsequence.go)
 
+**森林中的兔子**
+
+-[golang](./numRabbits.go)
+
 ## 困难
 
 **N 皇后 II**
