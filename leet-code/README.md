@@ -761,6 +761,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./clumsy.go)
 
+**删除有序数组中的重复项 II**
+
+-[golang](./removeDuplicates2.go)
+
 ## 困难
 
 **N 皇后 II**
