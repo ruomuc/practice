@@ -761,6 +761,14 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./clumsy.go)
 
+**最长公共子序列**
+
+-[golang](./longestCommonSubsequence.go)
+
+**森林中的兔子**
+
+-[golang](./numRabbits.go)
+
 **删除有序数组中的重复项 II**
 
 -[golang](./removeDuplicates2.go)
@@ -859,3 +867,7 @@ ps: 如果太简单了就只用一种 懒~
 **俄罗斯套娃信封问题**
 
 - [golang](./maxEnvelopes.go)
+
+**直方图的水量**
+
+- [golang](./trap.go)
