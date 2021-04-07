@@ -773,6 +773,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./removeDuplicates2.go)
 
+**搜索旋转排序数组 II**
+
+-[golang](./search.go)
+
 ## 困难
 
 **N 皇后 II**
