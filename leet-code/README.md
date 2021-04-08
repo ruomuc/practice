@@ -777,6 +777,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./search.go)
 
+**寻找旋转排序数组中的最小值**
+
+-[golang](./findMin.go)
+
 ## 困难
 
 **N 皇后 II**
