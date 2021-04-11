@@ -781,6 +781,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./findMin.go)
 
+**丑数 II**
+
+-[golang](./nthUglyNumber.go)
+
 ## 困难
 
 **N 皇后 II**
