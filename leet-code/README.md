@@ -785,6 +785,12 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./nthUglyNumber.go)
 
+**最大数**
+
+-[JavaScript](./largestNumber.js)
+-[golang](./largestNumber.go)
+
+
 ## 困难
 
 **N 皇后 II**
