@@ -413,6 +413,10 @@ ps: 如果太简单了就只用一种 懒~
 
 - [golang](./reverseBits.go)
 
+**二叉搜索树节点最小距离**
+
+- [golang](./minDiffInBST.go)
+
 ### 中等
 
 **子集**
