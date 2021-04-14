@@ -794,6 +794,9 @@ ps: 如果太简单了就只用一种 懒~
 -[JavaScript](./largestNumber.js)
 -[golang](./largestNumber.go)
 
+**实现 Trie (前缀树)**
+
+-[golang](./Trie.go)
 
 ## 困难
 
