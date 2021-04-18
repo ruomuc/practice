@@ -802,6 +802,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./rob.go)
 
+**删除字符串中的所有相邻重复项 II**
+
+-[golang](./removeDuplicates3.go)
+
 ## 困难
 
 **N 皇后 II**
