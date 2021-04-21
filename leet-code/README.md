@@ -806,6 +806,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./removeDuplicates3.go)
 
+**解码方法**
+
+-[golang](./numDecodings.go)
+
 ## 困难
 
 **N 皇后 II**
