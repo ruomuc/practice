@@ -904,3 +904,7 @@ ps: 如果太简单了就只用一种 懒~
 **直方图的水量**
 
 - [golang](./trap.go)
+
+**青蛙过河**
+
+- [golang](./canCross.go)
