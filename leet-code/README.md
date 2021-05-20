@@ -822,6 +822,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./findMaximumXOR.go)
 
+**前K个高频单词**
+
+-[golang](./topKFrequent.go)
+
 ## 困难
 
 **N 皇后 II**
