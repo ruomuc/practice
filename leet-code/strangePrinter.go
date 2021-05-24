@@ -1,7 +1,5 @@
 package main
 
-import "math"
-
 func strangePrinter(s string) int {
 	n := len(s)
 	if n == 1 {
@@ -22,7 +20,7 @@ func strangePrinter(s string) int {
 			return memo[i][j]
 		}
 
-		memo[i][j] = math.MaxInt64
+		memo[i][j] = dfs(i+1, j) + 1
 		for k := i + 1; k < j; k++ {
 			if s[i] == s[k] {
 				memo[i][j] = min(memo[i][j], dfs(i, k-1)+dfs(k+1, j))
