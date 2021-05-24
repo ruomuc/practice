@@ -932,3 +932,7 @@ ps: 如果太简单了就只用一种 懒~
 **青蛙过河**
 
 - [golang](./canCross.go)
+
+**奇怪的打印机**
+
+- [golang](./strangePrinter.go)
