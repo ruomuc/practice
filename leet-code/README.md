@@ -830,6 +830,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./maxUncrossedLines.go)
 
+**反转每对括号间的子串**
+
+-[golang](./reverseParentheses.go)
+
 ## 困难
 
 **N 皇后 II**
