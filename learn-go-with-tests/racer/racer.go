@@ -6,17 +6,7 @@ import (
 	"time"
 )
 
-func Racer(a, b string) (winner string, err error) {
-	select {
-	case <-ping(a):
-		winner = a
-	case <-ping(b):
-		winner = b
-	case <-time.After(10 * time.Second):
-		return "", fmt.Errorf("timed out waiting for %s and %s", a, b)
-	}
-	return winner, nil
-}
+var tenSecondTimeout = time.Duration(10 * time.Second)
 
 func ping(url string) chan bool {
 	ch := make(chan bool)
@@ -25,6 +15,17 @@ func ping(url string) chan bool {
 		ch <- true
 	}()
 	return ch
+}
+
+func Racer(a, b string, timeout time.Duration) (string, error) {
+	select {
+	case <-ping(a):
+		return a, nil
+	case <-ping(b):
+		return b, nil
+	case <-time.After(timeout):
+		return "", fmt.Errorf("timed out waiting for %s and %s", a, b)
+	}
 }
 
 //func getResponseDuration(url string) time.Duration {
