@@ -4,11 +4,39 @@ import (
 	"testing"
 )
 
-func TestUpdate(t *testing.T) {
-	word:="test"
-	description:="this is just a test"
-	dictionary := Dictionary{word:description}
+func TestDelete(t *testing.T) {
+	word := "test"
+	description := "this is just a test"
+	dictionary := Dictionary{word: description}
+	dictionary.Delete(word)
+	_, err := dictionary.Search(word)
+	if err != errorNotFoundWord {
+		t.Errorf("Expected '%s' to be deleted", word)
+	}
+}
 
+func TestUpdate(t *testing.T) {
+	t.Run("exist word", func(t *testing.T) {
+		word := "test"
+		description := "this is just a test"
+		dictionary := Dictionary{word: description}
+		newDescription := "new description"
+
+		err := dictionary.Update(word, newDescription)
+		assertError(t, err, nil)
+		assertDescription(t, dictionary, word, newDescription)
+	})
+
+	t.Run("new word", func(t *testing.T) {
+		word := "test"
+		description := "this is just a test"
+		dictionary := Dictionary{word: description}
+		newWord := "new description"
+
+		err := dictionary.Update(newWord, description)
+		assertError(t, err, errorNotExistWord)
+		assertDescription(t, dictionary, word, description)
+	})
 }
 
 func TestAdd(t *testing.T) {
