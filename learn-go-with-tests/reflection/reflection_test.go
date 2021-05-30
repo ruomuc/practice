@@ -39,6 +39,14 @@ func TestWalk(t *testing.T) {
 			},
 			[]string{"Chris", "beijing"},
 		},
+		{
+			"Pointers to things",
+			&Person{
+				"Chris",
+				Profile{33, "shanghai"},
+			},
+			[]string{"Chris", "shanghai"},
+		},
 	}
 
 	for _, test := range cases {
@@ -49,7 +57,7 @@ func TestWalk(t *testing.T) {
 			})
 
 			if !reflect.DeepEqual(got, test.ExpectedCalls) {
-				t.Errorf("got %v but want %v ", got, test.ExpectedCalls)
+				t.Errorf("testname: %s, got %v but want %v ", test.Name, got, test.ExpectedCalls)
 			}
 		})
 	}
