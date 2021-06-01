@@ -834,6 +834,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./reverseParentheses.go)
 
+**你能在你最喜欢的那天吃到你最喜欢的糖果吗？**
+
+-[golang](./canEat.go)
+
 ## 困难
 
 **N 皇后 II**
