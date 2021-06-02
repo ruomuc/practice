@@ -838,6 +838,10 @@ ps: 如果太简单了就只用一种 懒~
 
 -[golang](./canEat.go)
 
+**连续的子数组和**
+
+-[golang](./checkSubarraySum.go)
+
 ## 困难
 
 **N 皇后 II**
