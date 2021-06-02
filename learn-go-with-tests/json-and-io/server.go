@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 )
@@ -8,11 +9,17 @@ import (
 type PlayerStore interface {
 	GetPlayerScore(name string) int
 	RecordWin(name string)
+	GetLeague() []Player
 }
 
 type PlayerServer struct {
-	store  PlayerStore
+	store PlayerStore
 	http.Handler
+}
+
+type Player struct {
+	Name string
+	Wins int
 }
 
 func NewPlayerServer(store PlayerStore) *PlayerServer {
@@ -26,9 +33,11 @@ func NewPlayerServer(store PlayerStore) *PlayerServer {
 	return p
 }
 
-func (p PlayerServer) leagueHandler(w http.ResponseWriter, r *http.Request) {
+func (p *PlayerServer) leagueHandler(w http.ResponseWriter, r *http.Request) {
+	json.NewEncoder(w).Encode(p.store.GetLeague())
 	w.WriteHeader(http.StatusOK)
 }
+
 
 func (p PlayerServer) playersHandler(w http.ResponseWriter, r *http.Request) {
 	player := r.URL.Path[len("/players/"):]
@@ -58,6 +67,7 @@ func (p *PlayerServer) processWin(w http.ResponseWriter, player string) {
 type StubPlayerStore struct {
 	scores   map[string]int
 	winCalls []string
+	league []Player
 }
 
 func (sp *StubPlayerStore) GetPlayerScore(name string) int {
@@ -67,4 +77,8 @@ func (sp *StubPlayerStore) GetPlayerScore(name string) int {
 
 func (sp *StubPlayerStore) RecordWin(name string) {
 	sp.winCalls = append(sp.winCalls, name)
+}
+
+func (sp StubPlayerStore) GetLeague()[]Player  {
+	return sp.league
 }
