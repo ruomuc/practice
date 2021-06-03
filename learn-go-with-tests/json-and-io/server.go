@@ -22,6 +22,8 @@ type Player struct {
 	Wins int
 }
 
+var jsonContentType = "application/json"
+
 func NewPlayerServer(store PlayerStore) *PlayerServer {
 	p := &PlayerServer{}
 	p.store = store
@@ -35,9 +37,9 @@ func NewPlayerServer(store PlayerStore) *PlayerServer {
 
 func (p *PlayerServer) leagueHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(p.store.GetLeague())
+	w.Header().Set("content-type", jsonContentType)
 	w.WriteHeader(http.StatusOK)
 }
-
 
 func (p PlayerServer) playersHandler(w http.ResponseWriter, r *http.Request) {
 	player := r.URL.Path[len("/players/"):]
@@ -67,7 +69,7 @@ func (p *PlayerServer) processWin(w http.ResponseWriter, player string) {
 type StubPlayerStore struct {
 	scores   map[string]int
 	winCalls []string
-	league []Player
+	league   []Player
 }
 
 func (sp *StubPlayerStore) GetPlayerScore(name string) int {
@@ -79,6 +81,6 @@ func (sp *StubPlayerStore) RecordWin(name string) {
 	sp.winCalls = append(sp.winCalls, name)
 }
 
-func (sp StubPlayerStore) GetLeague()[]Player  {
+func (sp StubPlayerStore) GetLeague() []Player {
 	return sp.league
 }
