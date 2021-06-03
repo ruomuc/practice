@@ -7,8 +7,39 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"reflect"
+	"strings"
 	"testing"
 )
+
+func TestFileSystemStore(t *testing.T) {
+	t.Run("league from a reader", func(t *testing.T) {
+		database := strings.NewReader(`[
+		{"name":"Cleo","wins":10},
+		{"name":"Chris","wins":33}]`)
+
+		store := FileSystemStore{database}
+		got := store.GetLeague()
+		want := []Player{
+			{"Cleo", 10},
+			{"Chris", 33},
+		}
+		assertLeague(t, got, want)
+		got = store.GetLeague()
+		assertLeague(t, got, want)
+	})
+
+	t.Run("get player score", func(t *testing.T) {
+		database := strings.NewReader(`[
+		{"name":"Cleo","wins":10},
+		{"name":"Chris","wins":33}]`)
+
+		store := FileSystemStore{database}
+
+		got := store.GetPlayerScore("Chris")
+		want := 33
+		assertScoreEqual(t, got, want)
+	})
+}
 
 func TestRecordingWinsAndRetrievingThem(t *testing.T) {
 	store := NewInMemoryPlayerStore()
@@ -81,6 +112,12 @@ func TestLeague(t *testing.T) {
 		assertStatus(t, response.Code, http.StatusOK)
 		assertLeague(t, got, wantedLeague)
 	})
+}
+
+func assertScoreEqual(t *testing.T, got, want int) {
+	if got != want {
+		t.Errorf("got %d want %d", got, want)
+	}
 }
 
 func assertResponseBody(t *testing.T, got, want string) {
