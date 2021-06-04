@@ -9,7 +9,7 @@ import (
 type PlayerStore interface {
 	GetPlayerScore(name string) int
 	RecordWin(name string)
-	GetLeague() []Player
+	GetLeague() League
 }
 
 type PlayerServer struct {
@@ -38,7 +38,6 @@ func NewPlayerServer(store PlayerStore) *PlayerServer {
 func (p *PlayerServer) leagueHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(p.store.GetLeague())
 	w.Header().Set("content-type", jsonContentType)
-	w.WriteHeader(http.StatusOK)
 }
 
 func (p PlayerServer) playersHandler(w http.ResponseWriter, r *http.Request) {
@@ -81,6 +80,6 @@ func (sp *StubPlayerStore) RecordWin(name string) {
 	sp.winCalls = append(sp.winCalls, name)
 }
 
-func (sp StubPlayerStore) GetLeague() []Player {
+func (sp StubPlayerStore) GetLeague() League {
 	return sp.league
 }
