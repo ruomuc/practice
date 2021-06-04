@@ -4,20 +4,22 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"reflect"
-	"strings"
 	"testing"
 )
 
 func TestFileSystemStore(t *testing.T) {
 	t.Run("league from a reader", func(t *testing.T) {
-		database := strings.NewReader(`[
+		database, cleanDatabase := createTempFile(t, `[
 		{"name":"Cleo","wins":10},
 		{"name":"Chris","wins":33}]`)
+		defer cleanDatabase()
 
-		store := FileSystemStore{database}
+		store := NewFileSystemPlayerStore(database)
 		got := store.GetLeague()
 		want := []Player{
 			{"Cleo", 10},
@@ -29,14 +31,43 @@ func TestFileSystemStore(t *testing.T) {
 	})
 
 	t.Run("get player score", func(t *testing.T) {
-		database := strings.NewReader(`[
+		database, cleanDatabase := createTempFile(t, `[
 		{"name":"Cleo","wins":10},
 		{"name":"Chris","wins":33}]`)
+		defer cleanDatabase()
 
-		store := FileSystemStore{database}
+		store := NewFileSystemPlayerStore(database)
 
 		got := store.GetPlayerScore("Chris")
 		want := 33
+		assertScoreEqual(t, got, want)
+	})
+
+	t.Run("record wins for exists player", func(t *testing.T) {
+		database, cleanDatabase := createTempFile(t, `[
+		{"name":"Cleo","wins":10},
+		{"name":"Chris","wins":33}]`)
+		defer cleanDatabase()
+
+		store := NewFileSystemPlayerStore(database)
+		store.RecordWin("Chris")
+
+		got := store.GetPlayerScore("Chris")
+		want := 34
+		assertScoreEqual(t, got, want)
+	})
+
+	t.Run("record wins for not exist player", func(t *testing.T) {
+		database, cleanDatabase := createTempFile(t, `[
+		{"name":"Cleo","wins":10},
+		{"name":"Chris","wins":33}]`)
+		defer cleanDatabase()
+
+		store := NewFileSystemPlayerStore(database)
+		store.RecordWin("Pepper")
+
+		got := store.GetPlayerScore("Pepper")
+		want := 1
 		assertScoreEqual(t, got, want)
 	})
 }
@@ -112,6 +143,20 @@ func TestLeague(t *testing.T) {
 		assertStatus(t, response.Code, http.StatusOK)
 		assertLeague(t, got, wantedLeague)
 	})
+}
+
+func createTempFile(t *testing.T, initData string) (io.ReadWriteSeeker, func()) {
+	t.Helper()
+
+	tempFile, err := ioutil.TempFile("", "db")
+	if err != nil {
+		t.Fatalf("could not create temp file %v", err)
+	}
+	tempFile.Write([]byte(initData))
+	removeFile := func() {
+		os.Remove(tempFile.Name())
+	}
+	return tempFile, removeFile
 }
 
 func assertScoreEqual(t *testing.T, got, want int) {
