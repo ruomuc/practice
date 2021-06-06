@@ -145,7 +145,7 @@ func TestLeague(t *testing.T) {
 	})
 }
 
-func createTempFile(t *testing.T, initData string) (io.ReadWriteSeeker, func()) {
+func createTempFile(t *testing.T, initData string) (*os.File, func()) {
 	t.Helper()
 
 	tempFile, err := ioutil.TempFile("", "db")
@@ -160,6 +160,7 @@ func createTempFile(t *testing.T, initData string) (io.ReadWriteSeeker, func()) 
 }
 
 func assertScoreEqual(t *testing.T, got, want int) {
+	t.Helper()
 	if got != want {
 		t.Errorf("got %d want %d", got, want)
 	}
@@ -194,6 +195,7 @@ func newLeagueRequest() *http.Request {
 }
 
 func assertLeague(t *testing.T, got, want []Player) bool {
+	t.Helper()
 	if !reflect.DeepEqual(got, want) {
 		t.Errorf("got %v want %v", got, want)
 	}
