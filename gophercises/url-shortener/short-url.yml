@@ -1,0 +1,4 @@
+- path: /urlshort
+  url: https://www.baidu.com
+- path: /urlshort-final
+  url: https://taobao.com
