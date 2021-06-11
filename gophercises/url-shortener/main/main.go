@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -8,16 +9,11 @@ import (
 )
 
 func main() {
+	flag.String("yml", "short-url", "a yml file to redirect url")
+	flag.Parse()
 	mux := defaultMux()
-
-	pathsToUrls := map[string]string{
-		"/urlshort-godoc": "https://godoc.org/github.com/gophercises/urlshort",
-		"/yaml-godoc":     "https://godoc.org/gopkg.in/yaml.v2",
-	}
-	mapHandler := urlshort.MapHandler(pathsToUrls, mux)
-
 	ymlFile, _ := ioutil.ReadFile("short-url.yml")
-	yamlHandler, err := urlshort.YAMLHandler(ymlFile, mapHandler)
+	yamlHandler, err := urlshort.YAMLHandler(ymlFile, mux)
 	if err != nil {
 		panic(err)
 	}
