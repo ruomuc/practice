@@ -1,0 +1,5 @@
+package cyoaterminal
+
+func main() {
+
+}
