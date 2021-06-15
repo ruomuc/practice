@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-	s
 	var input string
 	fmt.Scanf("%s\n", &input)
 	fmt.Println("Input is", input)
