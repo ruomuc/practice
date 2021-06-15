@@ -2,39 +2,44 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 func main() {
-	var delta int
-	var key, input string
-	//fmt.Scanf("%s\n", key)
+	var length, delta int
+	var input string
+	fmt.Scanf("%d\n", &length)
 	fmt.Scanf("%s\n", &input)
-	//fmt.Scanf("%d\n", delta)
+	fmt.Scanf("%d\n", &delta)
 
-	key = "abcdefghigklmnopqrstuvwxyz"
-	capitalKey := "ABCDEFGHIGKLMNOPQRSTUVWXYZ"
-	delta = 2
 	ans := make([]rune, 0)
 	for _, ch := range input {
-		switch {
-		case strings.IndexRune(key, ch) >= 0:
-			ans = append(ans, rotate(ch, delta, []rune(key)))
-		case strings.IndexRune(capitalKey, ch) >= 0:
-			ans = append(ans, rotate(ch, delta, []rune(capitalKey)))
-		default:
-			ans = append(ans, ch)
-		}
+		ans = append(ans, cipher(ch, delta))
 	}
 	fmt.Println(string(ans))
 }
 
-func rotate(s rune, delta int, key []rune) rune {
-	idx := strings.IndexRune(string(key), s)
-	if idx < 0 {
-		// not found
-		panic("idx < 0")
+func cipher(r rune, delta int) rune {
+	if r >= 'A' && r <= 'Z' {
+		return rotate(r, 'A', delta)
 	}
-	idx = (idx + delta) % len(key)
-	return key[idx]
+	if r >= 'a' && r <= 'z' {
+		return rotate(r, 'a', delta)
+	}
+	return r
 }
+
+func rotate(r rune, base, delta int) rune {
+	temp := int(r) - base
+	temp = (temp + delta) % 26
+	return rune(temp + base)
+}
+
+//func rotate(s rune, delta int, key []rune) rune {
+//	idx := strings.IndexRune(string(key), s)
+//	if idx < 0 {
+//		// not found
+//		panic("idx < 0")
+//	}
+//	idx = (idx + delta) % len(key)
+//	return key[idx]
+//}
