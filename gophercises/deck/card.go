@@ -11,11 +11,11 @@ import (
 type Suit uint8
 
 const (
-	Spade Suit = iota
-	Diamond
-	Club
-	Heart
-	Joker
+	Spade   Suit = iota // 黑桃
+	Diamond             // 方片
+	Club                // 梅花
+	Heart               // 红桃
+	Joker               // 大小王
 )
 
 var suits = []Suit{Spade, Diamond, Club, Heart}
