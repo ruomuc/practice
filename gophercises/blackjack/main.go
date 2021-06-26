@@ -126,7 +126,7 @@ func (h Hand) MinScore() int {
 
 func (h Hand) Score() int {
 	minScore := h.MinScore()
-	if minScore < 11 {
+	if minScore > 11 {
 		return minScore
 	}
 	for _, c := range h {
@@ -173,15 +173,16 @@ func (gs *GameState) CurrentPlayer() *Hand {
 }
 
 func clone(gs GameState) GameState {
+	// 这里不拷贝好像也没有什么问题
 	return gs
-	ret := GameState{
-		Deck:   make([]deck.Card, len(gs.Deck)),
-		State:  gs.State,
-		Player: make(Hand, len(gs.Player)),
-		Dealer: make(Hand, len(gs.Dealer)),
-	}
-	copy(ret.Deck, gs.Deck)
-	copy(ret.Player, gs.Player)
-	copy(ret.Dealer, gs.Dealer)
-	return ret
+	//ret := GameState{
+	//	Deck:   make([]deck.Card, len(gs.Deck)),
+	//	State:  gs.State,
+	//	Player: make(Hand, len(gs.Player)),
+	//	Dealer: make(Hand, len(gs.Dealer)),
+	//}
+	//copy(ret.Deck, gs.Deck)
+	//copy(ret.Player, gs.Player)
+	//copy(ret.Dealer, gs.Dealer)
+	//return ret
 }
