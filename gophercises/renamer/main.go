@@ -2,22 +2,55 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"os"
 	"path"
+	"path/filepath"
 	"strconv"
 	"strings"
 )
 
 func main() {
-	fileName := "birthday_001.txt"
-	newName, err := match(fileName, 4)
+	dirname := "./sample"
+	files, err := ioutil.ReadDir(dirname)
+
+	count := 0
+	originNames := make([]string, 0)
 	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		panic(err)
+	} else {
+		for _, file := range files {
+			fileName := file.Name()
+			if file.IsDir() {
+				fmt.Println("Dir:", fileName)
+			} else {
+				_, err := match(fileName, 0)
+				if err == nil {
+					count++
+					originNames = append(originNames, fileName)
+				}
+			}
+		}
 	}
-	fmt.Println(newName)
+
+	for _, origin := range originNames {
+		originPath := filepath.Join(dirname, origin)
+		newName, err := match(origin, count)
+		if err != nil {
+			fmt.Println(err)
+			continue
+		}
+		newPath := filepath.Join(dirname, newName)
+		fmt.Printf("mv %s => %s\n", originPath, newPath)
+		err = os.Rename(originPath, newPath)
+		if err != nil {
+			panic(err)
+		}
+	}
 }
 
+// rename xx_number.ext => Xx (number of number).ext
+// example: birthday_001.txt => Birthday (1 of 4).txt
 func match(fileName string, total int) (string, error) {
 	base, ext := path.Base(fileName), path.Ext(fileName)
 	name := strings.TrimSuffix(base, ext)
