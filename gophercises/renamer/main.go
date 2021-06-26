@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path"
 	"path/filepath"
@@ -10,39 +9,39 @@ import (
 	"strings"
 )
 
+type file struct {
+	name string
+	path string
+}
+
 func main() {
 	dirname := "./sample"
-	files, err := ioutil.ReadDir(dirname)
-
-	count := 0
-	originNames := make([]string, 0)
-	if err != nil {
-		panic(err)
-	} else {
-		for _, file := range files {
-			fileName := file.Name()
-			if file.IsDir() {
-				fmt.Println("Dir:", fileName)
-			} else {
-				_, err := match(fileName, 0)
-				if err == nil {
-					count++
-					originNames = append(originNames, fileName)
-				}
-			}
+	var originNames []file
+	filepath.Walk(dirname, func(path string, info os.FileInfo, err error) error {
+		if info.IsDir() {
+			return nil
 		}
-	}
+		fileName := info.Name()
+		if _, err := match(fileName, 0); err == nil {
+			originNames = append(originNames, file{
+				name: fileName,
+				path: path,
+			})
+		}
+		return nil
+	})
 
 	for _, origin := range originNames {
-		originPath := filepath.Join(dirname, origin)
-		newName, err := match(origin, count)
+		var newFile file
+		var err error
+		newFile.name, err = match(origin.name, 0)
 		if err != nil {
-			fmt.Println(err)
+			fmt.Printf("Error match: %s\n", err)
 			continue
 		}
-		newPath := filepath.Join(dirname, newName)
-		fmt.Printf("mv %s => %s\n", originPath, newPath)
-		err = os.Rename(originPath, newPath)
+		newFile.path = filepath.Join(dirname, newFile.name)
+		fmt.Printf("mv %s => %s\n", origin.path, newFile.path)
+		err = os.Rename(origin.path, newFile.path)
 		if err != nil {
 			panic(err)
 		}
