@@ -4,12 +4,12 @@ import (
 	"flag"
 	"fmt"
 	"os"
-	"path"
 	"path/filepath"
-	"sort"
-	"strconv"
-	"strings"
+	"regexp"
 )
+
+var re = regexp.MustCompile("^(.*?) ([0-9]{4}) [(]([0-9]+) of ([0-9]+)[)][.](.+?)$")
+var replaceString = "$2 - $1 - $3 of $4.$5"
 
 func main() {
 	var mock bool
@@ -20,65 +20,35 @@ func main() {
 	flag.Parse()
 	fmt.Println(mock, walkDir)
 
-	originDirs := make(map[string][]string)
+	var originFiles []string
 	filepath.Walk(walkDir, func(path string, info os.FileInfo, err error) error {
 		if info.IsDir() {
 			return nil
 		}
-		fileName := info.Name()
-		curDir := filepath.Dir(path)
-		if m, err := match(fileName); err == nil {
-			// 使用这个key的原因是：
-			// 同一文件夹中的不同文件，名称相差太大
-			// 比如：nested/birthday_008.txt 和 nested/n_008.txt 不应该在一组
-			key := filepath.Join(curDir, fmt.Sprintf("%s%s", m.base, m.ext))
-			originDirs[key] = append(originDirs[key], fileName)
+		if _, err := match(info.Name()); err == nil {
+			originFiles = append(originFiles, path)
 		}
 		return nil
 	})
 
-	for key, files := range originDirs {
-		n := len(files)
-		dir := filepath.Dir(key)
-		sort.Strings(files)
-		for i, fileName := range files {
-			res, _ := match(fileName)
-			newFileName := fmt.Sprintf("%s-%d of %d%s", res.base, (i + 1), n, res.ext)
-			oldPath := filepath.Join(dir, fileName)
-			newPath := filepath.Join(dir, newFileName)
-			fmt.Printf("mv %s=>%s\n", oldPath, newPath)
-			if !mock {
-				err := os.Rename(oldPath, newPath)
-				if err != nil {
-					panic(err)
-				}
+	for _, oldPath := range originFiles {
+		dir := filepath.Dir(oldPath)
+		fileName := filepath.Base(oldPath)
+		newFileName, _ := match(fileName)
+		newPath := filepath.Join(dir, newFileName)
+		fmt.Printf("mv %s=>%s\n", oldPath, newPath)
+		if !mock {
+			err := os.Rename(oldPath, newPath)
+			if err != nil {
+				panic(err)
 			}
 		}
 	}
 }
 
-type matchResult struct {
-	base string
-	idx  int
-	ext  string
-}
-
-// rename xx_number.ext => Xx (number of number).ext
-// example: birthday_001.txt => Birthday (1 of 4).txt
-func match(fileName string) (*matchResult, error) {
-	base, ext := path.Base(fileName), path.Ext(fileName)
-	name := strings.TrimSuffix(base, ext)
-
-	pieces := strings.Split(name, "_")
-	number, err := strconv.Atoi(pieces[len(pieces)-1])
-	name = strings.Join(pieces[0:len(pieces)-1], "_")
-
-	if err != nil {
-		return nil, fmt.Errorf("%s didn't match", fileName)
+func match(fileName string) (string, error) {
+	if !re.MatchString(fileName) {
+		return "", fmt.Errorf("%s didn't match", fileName)
 	}
-	return &matchResult{
-		base: strings.Title(name),
-		idx:  number,
-		ext:  ext,
-	}, nil
+	return re.ReplaceAllString(fileName, replaceString), nil
 }
