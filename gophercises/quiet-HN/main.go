@@ -11,6 +11,7 @@ import (
 	"quiet-HN/hn"
 	"sort"
 	"strings"
+	"sync"
 	"time"
 )
 
@@ -36,9 +37,13 @@ type templateData struct {
 }
 
 func handler(numStories int, tpl *template.Template) http.HandlerFunc {
+	sc := storyCache{
+		numStories: numStories,
+		duration:   10 * time.Second,
+	}
 	return func(w http.ResponseWriter, r *http.Request) {
 		start := time.Now()
-		stories, err := getTopStories(numStories)
+		stories, err := sc.stories()
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
@@ -55,6 +60,39 @@ func handler(numStories int, tpl *template.Template) http.HandlerFunc {
 	}
 }
 
+type storyCache struct {
+	numStories     int
+	cacheA, cacheB []item
+	useA           bool
+	expiration     time.Time
+	duration       time.Duration
+	mutex          sync.Mutex
+}
+
+func (s *storyCache) stories() ([]item, error) {
+	s.mutex.Lock()
+	defer s.mutex.Unlock()
+	if time.Now().Sub(s.expiration) < 0 {
+		if s.useA {
+			return s.cacheA, nil
+		} else {
+			return s.cacheB, nil
+		}
+	}
+	stories, err := getTopStories(s.numStories)
+	if err != nil {
+		return nil, err
+	}
+	s.expiration = time.Now().Add(s.duration)
+	if s.useA {
+		s.cacheA = stories
+		return s.cacheA, nil
+	} else {
+		s.cacheB = stories
+		return s.cacheB, nil
+	}
+}
+
 func getTopStories(numStories int) ([]item, error) {
 	var client hn.Client
 	ids, err := client.TopItems()
@@ -64,7 +102,6 @@ func getTopStories(numStories int) ([]item, error) {
 	var stories []item
 	at := 0
 	for len(stories) < numStories {
-		fmt.Println("loop", at, len(ids))
 		need := numStories - len(stories)
 		stories = append(stories, getStories(ids[at:at+need])...)
 		at += need
