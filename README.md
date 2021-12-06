@@ -1,2 +1,2 @@
 ## practice
-Some practice codes
+Some practice code
