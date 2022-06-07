@@ -4,4 +4,6 @@
 
 leet-code/leet-code.exe
 package-lock.json
-guessing-game/target
+
+rust/guessing-game/target
+rust/guessing-game/Cargo.lock
