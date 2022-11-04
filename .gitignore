@@ -8,4 +8,5 @@ package-lock.json
 rust/guessing-game/target
 rust/guessing-game/Cargo.lock
 
-toy-render/out
+other/toy-render/out
+other/napi-demo/build/
