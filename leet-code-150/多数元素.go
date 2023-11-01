@@ -1,11 +1,11 @@
 // https://leetcode.cn/problems/majority-element/?envType=study-plan-v2&envId=top-interview-150
 
-import "fmt"
+package main
 
 func majorityElement(nums []int) int {
 	dict := make(map[int]int)
 
-	for i,v:=range nums{
+	for i, v := range nums {
 		if _, ok := dict[i]; !ok {
 			dict[v] = 1
 		} else {
@@ -13,9 +13,9 @@ func majorityElement(nums []int) int {
 		}
 	}
 
-	maxKey:=0
+	maxKey := 0
 
-	for k,v := range dict {
+	for k, v := range dict {
 		if dict[maxKey] < v {
 			maxKey = k
 		}
