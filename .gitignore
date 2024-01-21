@@ -10,3 +10,7 @@ rust/guessing-game/Cargo.lock
 
 other/toy-render/out
 other/napi-demo/build/
+
+
+napi-test/build
+
